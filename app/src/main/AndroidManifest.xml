@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SummaryActivity"></activity>
+        <activity android:name=".SummaryActivity" />
+        <activity android:name=".MoodsActivity" />
+        <activity android:name=".AutoActivity" />
+        <activity android:name=".ProActivity" />
+        <activity android:name=".ConActivity" />
+        <activity android:name=".AltActivity" />
+        <activity android:name=".NowActivity"></activity>
     </application>
 
 </manifest>

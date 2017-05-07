@@ -24,7 +24,7 @@ public class SitActivity extends AppCompatActivity {
                 EditText getSitRecord = (EditText) findViewById(R.id.sit);
                 String sitRecord = getSitRecord.getText().toString();
 
-                Intent nextIntent = new Intent(SitActivity.this, SummaryActivity.class);
+                Intent nextIntent = new Intent(SitActivity.this, MoodsActivity.class);
                 nextIntent = nextIntent.putExtra("com.example.android.logthoughts.sitRecord", sitRecord);
                 startActivity(nextIntent);
             }

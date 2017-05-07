@@ -18,20 +18,44 @@ public class SummaryActivity extends AppCompatActivity {
             if(extras == null) {
                 recordSummary = "Nothing to see here";
             } else {
-                recordSummary= extras.getString("com.example.android.logthoughts.sitRecord");
+                recordSummary = extras.getString("com.example.android.logthoughts.sitRecord");
+                recordSummary += System.getProperty("line.separator");
+                recordSummary += extras.getString("com.example.android.logthoughts.moodsRecord");
+                recordSummary += System.getProperty("line.separator");
+                recordSummary += extras.getString("com.example.android.logthoughts.autoRecord");
+                recordSummary += System.getProperty("line.separator");
+                recordSummary += extras.getString("com.example.android.logthoughts.proRecord");
+                recordSummary += System.getProperty("line.separator");
+                recordSummary += extras.getString("com.example.android.logthoughts.conRecord");
+                recordSummary += System.getProperty("line.separator");
+                recordSummary += extras.getString("com.example.android.logthoughts.altRecord");
+                recordSummary += System.getProperty("line.separator");
+                recordSummary += extras.getString("com.example.android.logthoughts.nowRecord");
             }
         } else {
-            recordSummary= (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
+            recordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
+            recordSummary += "\n";
+            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.moodsRecord");
+            recordSummary += "\n";
+            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.autoRecord");
+            recordSummary += "\n";
+            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.proRecord");
+            recordSummary += "\n";
+            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.conRecord");
+            recordSummary += "\n";
+            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.altRecord");
+            recordSummary += "\n";
+            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.nowRecord");
         }
 
-        displyRecordSummary();
+        displayRecordSummary();
     }
 
     public String createRecordSummary(){
         return recordSummary;
     }
 
-    private void displyRecordSummary() {
+    private void displayRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.summary_text);
         summaryTextView.setText(recordSummary);
     }
