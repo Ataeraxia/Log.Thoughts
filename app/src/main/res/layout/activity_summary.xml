@@ -1,14 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.logthoughts.SummaryActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.logthoughts.SummaryActivity">
+    android:orientation="vertical" >
 
+    <!-- SUMMARY HEADLINE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thought Record Summary"
+        android:textSize="24sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- SITUATION TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Situation"
+        android:textSize="20sp"/>
+
+    <!-- SITUATION BODY 1 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/summary_text"
-        android:textSize="24sp"/>
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/sit_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
+    <!-- MOODS TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Moods"
+        android:textSize="20sp"/>
+
+    <!-- MOODS BODY 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/moods_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
+    <!-- AUTO TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Automatic Thoughts"
+        android:textSize="20sp"/>
+
+    <!-- AUTO BODY 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/auto_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
+    <!-- PRO TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Evidence That Supports the Hot Thought"
+        android:textSize="20sp"/>
+
+    <!-- PRO BODY 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/pro_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
+    <!-- CON TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Evidence That Does Not Support the Hot Thought"
+        android:textSize="20sp"/>
+
+    <!-- CON BODY 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/con_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
+    <!-- ALT TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Alternative/Balanced Thoughts"
+        android:textSize="20sp"/>
+
+    <!-- ALT BODY 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/alt_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
+    <!-- NOW TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="Moods After Completing Log.Thoughts"
+        android:textSize="20sp"/>
+
+    <!-- NOW BODY 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:id="@+id/now_summary_text"
+        android:textSize="14sp"
+        tools:text="Lots of the text stuff" />
+
 </LinearLayout>
+
+</ScrollView>

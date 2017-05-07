@@ -6,7 +6,14 @@ import android.widget.TextView;
 
 public class SummaryActivity extends AppCompatActivity {
 
-    String recordSummary;
+    String recordSummaryNull;
+    String sitRecordSummary;
+    String moodsRecordSummary;
+    String autoRecordSummary;
+    String proRecordSummary;
+    String conRecordSummary;
+    String altRecordSummary;
+    String nowRecordSummary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,47 +23,67 @@ public class SummaryActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
-                recordSummary = "Nothing to see here";
+                recordSummaryNull = "Nothing to see here";
             } else {
-                recordSummary = extras.getString("com.example.android.logthoughts.sitRecord");
-                recordSummary += System.getProperty("line.separator");
-                recordSummary += extras.getString("com.example.android.logthoughts.moodsRecord");
-                recordSummary += System.getProperty("line.separator");
-                recordSummary += extras.getString("com.example.android.logthoughts.autoRecord");
-                recordSummary += System.getProperty("line.separator");
-                recordSummary += extras.getString("com.example.android.logthoughts.proRecord");
-                recordSummary += System.getProperty("line.separator");
-                recordSummary += extras.getString("com.example.android.logthoughts.conRecord");
-                recordSummary += System.getProperty("line.separator");
-                recordSummary += extras.getString("com.example.android.logthoughts.altRecord");
-                recordSummary += System.getProperty("line.separator");
-                recordSummary += extras.getString("com.example.android.logthoughts.nowRecord");
+                sitRecordSummary = extras.getString("com.example.android.logthoughts.sitRecord");
+                moodsRecordSummary = extras.getString("com.example.android.logthoughts.moodsRecord");
+                autoRecordSummary = extras.getString("com.example.android.logthoughts.autoRecord");
+                proRecordSummary = extras.getString("com.example.android.logthoughts.proRecord");
+                conRecordSummary = extras.getString("com.example.android.logthoughts.conRecord");
+                altRecordSummary = extras.getString("com.example.android.logthoughts.altRecord");
+                nowRecordSummary = extras.getString("com.example.android.logthoughts.nowRecord");
             }
         } else {
-            recordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
-            recordSummary += "\n";
-            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.moodsRecord");
-            recordSummary += "\n";
-            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.autoRecord");
-            recordSummary += "\n";
-            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.proRecord");
-            recordSummary += "\n";
-            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.conRecord");
-            recordSummary += "\n";
-            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.altRecord");
-            recordSummary += "\n";
-            recordSummary += (String) savedInstanceState.getSerializable("com.example.android.logthoughts.nowRecord");
+            sitRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
+            moodsRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.moodsRecord");
+            autoRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.autoRecord");
+            proRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.proRecord");
+            conRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.conRecord");
+            altRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.altRecord");
+            nowRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.nowRecord");
         }
 
-        displayRecordSummary();
+        displaySitRecordSummary();
+        displayMoodsRecordSummary();
+        displayAutoRecordSummary();
+        displayProRecordSummary();
+        displayConRecordSummary();
+        displayAltRecordSummary();
+        displayNowRecordSummary();
     }
 
-    public String createRecordSummary(){
-        return recordSummary;
+    private void displaySitRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.sit_summary_text);
+        summaryTextView.setText(sitRecordSummary);
     }
 
-    private void displayRecordSummary() {
-        TextView summaryTextView = (TextView) findViewById(R.id.summary_text);
-        summaryTextView.setText(recordSummary);
+    private void displayMoodsRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.moods_summary_text);
+        summaryTextView.setText(moodsRecordSummary);
+    }
+
+    private void displayAutoRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.auto_summary_text);
+        summaryTextView.setText(autoRecordSummary);
+    }
+
+    private void displayProRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.pro_summary_text);
+        summaryTextView.setText(proRecordSummary);
+    }
+
+    private void displayConRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.con_summary_text);
+        summaryTextView.setText(conRecordSummary);
+    }
+
+    private void displayAltRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.alt_summary_text);
+        summaryTextView.setText(altRecordSummary);
+    }
+
+    private void displayNowRecordSummary() {
+        TextView summaryTextView = (TextView) findViewById(R.id.now_summary_text);
+        summaryTextView.setText(nowRecordSummary);
     }
 }
