@@ -143,6 +143,14 @@
         android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
+    <!-- RESTART BUTTON -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MarginStyleMiddle"
+        android:text="restart"
+        android:onClick="restartThoughtRecord"/>
+
 </LinearLayout>
 
 </ScrollView>
