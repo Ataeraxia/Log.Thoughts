@@ -4,4 +4,11 @@
     <string name="sit_display1">Situation</string>
     <string name="next">next</string>
     <string name="sit_sub">Who? What? When? Where?</string>
+
+    <string name="sit_help_text_start">When describing your situation, be as descriptive as possible. It\'s important to note your surroundings.</string>
+    <string name="sit_help_text_questart">A few helpful questions you can ask yourself are:</string>
+    <string name="sit_help_text_quests">1. Who was I with?\n2. What was I doing?\n3. When did it happen?\n4. Where was I?</string>
+    <string name="sit_help_text_time">Include a specific time frame that does not exceed 30 minutes. For example, there are too many different situations, emotions, and thoughts that can occur \"all day Tuesday.\" A better description might be \"Tuesday at noon.\"</string>
+    <string name="sit_help_text_good">Good example:\n"Friday morning at 8. Making coffee. Kids are getting ready for school. Husband is watching the news."</string>
+    <string name="sit_help_text_bad">Bad example:\n"Friday before work. Very loud. Irritated at husband."</string>
 </resources>

@@ -5,6 +5,7 @@
     <color name="colorAccent">#0091EA</color>
 
     <color name="background_blue">#81D4FA</color>
+    <color name="help_background_blue">#BBDEFB</color>
     <color name="text_on400">#FAFAFA</color>
     <color name="text_on200">#424242</color>
     <color name="yellow">#e6ee9c</color>
