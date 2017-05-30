@@ -31,7 +31,7 @@ public class SitActivity extends AppCompatActivity {
             }
         });
 
-        TextView sitHelpText = (TextView) findViewById(R.id.help_text);
+        final TextView sitHelpText = (TextView) findViewById(R.id.help_text);
 
         sitHelpText.setOnClickListener(new View.OnClickListener() {
 

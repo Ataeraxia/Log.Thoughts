@@ -5,6 +5,7 @@
     <string name="next">next</string>
     <string name="sit_sub">Who? What? When? Where?</string>
 
+    <string name="sit_head">Describing your situation</string>
     <string name="sit_help_text_start">When describing your situation, be as descriptive as possible. It\'s important to note your surroundings.</string>
     <string name="sit_help_text_questart">A few helpful questions you can ask yourself are:</string>
     <string name="sit_help_text_quests">1. Who was I with?\n2. What was I doing?\n3. When did it happen?\n4. Where was I?</string>

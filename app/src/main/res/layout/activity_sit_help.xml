@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.logthoughts.SitHelpActivity"
-    android:background="@color/help_background_blue" >
+    android:background="@color/lightblue_100" >
 
     <!-- TECHNICAL ROOT LAYOUT -->
     <RelativeLayout
@@ -16,28 +16,15 @@
         <!-- in SIT HELP -->
         <TextView
             android:id="@+id/sit_help_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="64dp"
-            android:text="Describing your situation"
-            android:textColor="@color/text_on200"
-            android:textSize="24sp" />
+            style="@style/headline_help_text"
+            android:text="@string/sit_head" />
 
         <!-- START -->
         <!-- in SIT HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/sit_help_text_start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/body_help_text"
             android:layout_below="@id/sit_help_head"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
             android:layout_marginTop="32dp"
             android:text="@string/sit_help_text_start" />
 
@@ -45,70 +32,40 @@
         <!-- in SIT HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/sit_help_text_questart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/body_help_text"
             android:layout_below="@id/sit_help_text_start"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="32dp"
             android:text="@string/sit_help_text_questart" />
 
         <!-- QUESTS -->
         <!-- in SIT HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/sit_help_text_quests"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/body_help_text"
             android:layout_below="@id/sit_help_text_questart"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="32dp"
             android:text="@string/sit_help_text_quests" />
 
         <!-- TIME -->
         <!-- in SIT HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/sit_help_text_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/body_help_text"
             android:layout_below="@id/sit_help_text_quests"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="32dp"
             android:text="@string/sit_help_text_time" />
 
         <!-- GOOD -->
         <!-- in SIT HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/sit_help_text_good"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/body_help_text"
             android:layout_below="@id/sit_help_text_time"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="32dp"
             android:text="@string/sit_help_text_good" />
 
         <!-- BAD -->
         <!-- in SIT HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/sit_help_text_bad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/body_help_text"
             android:layout_below="@id/sit_help_text_good"
-            android:layout_marginEnd="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginRight="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="32dp"
             android:text="@string/sit_help_text_bad" />
 
     </RelativeLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_blue"
+    android:background="@color/lightblue_200"
     android:orientation="vertical"
     tools:context="com.example.android.logthoughts.SitActivity">
 
@@ -32,12 +32,15 @@
     <TextView
         android:id="@+id/help_text"
         android:layout_width="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="24dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="72dp"
         android:layout_marginStart="72dp"
         android:layout_marginRight="72dp"
         android:layout_marginEnd="72dp"
         android:layout_below="@id/sit_sub"
+        android:textColor="@color/lightblue_700"
         android:text="More help"/>
 
     <!-- SIT EDITTEXT -->
@@ -52,7 +55,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:hint="4pm, at home, sorting laundry"
         android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences"
         android:paddingBottom="8dp"

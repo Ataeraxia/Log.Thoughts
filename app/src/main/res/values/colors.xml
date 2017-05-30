@@ -4,8 +4,11 @@
     <color name="colorPrimaryDark">#01579B</color>
     <color name="colorAccent">#0091EA</color>
 
-    <color name="background_blue">#81D4FA</color>
-    <color name="help_background_blue">#BBDEFB</color>
+    <color name="lightblue_100">#B3E5FC</color>
+    <color name="lightblue_200">#81D4FA</color>
+    <color name="lightblue_400">#29B6F6</color>
+    <color name="lightblue_600">#039BE5</color>
+    <color name="lightblue_700">#0288D1</color>
     <color name="text_on400">#FAFAFA</color>
     <color name="text_on200">#424242</color>
     <color name="yellow">#e6ee9c</color>
