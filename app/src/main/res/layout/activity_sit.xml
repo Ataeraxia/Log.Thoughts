@@ -1,34 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_blue"
     android:orientation="vertical"
     tools:context="com.example.android.logthoughts.SitActivity">
 
+    <!-- SIT DISPLAY 1 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Situation"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/sit"
+        android:id="@+id/sit_display1"
+        style="@style/display1_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginTop="48dp"
-        android:hint="4pm, at home, sorting laundry"
-        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/sit_display1" />
 
-    <Button
-        android:id="@+id/next_sit"
+    <!-- SIT SUBHEADING -->
+    <TextView
+        android:id="@+id/sit_sub"
+        style="@style/sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next" />
+        android:layout_below="@id/sit_display1"
+        android:text="@string/sit_sub" />
 
-</LinearLayout>
+    <!-- HELP BUTTON TEXT THING -->
+    <TextView
+        android:id="@+id/help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginEnd="72dp"
+        android:layout_below="@id/sit_sub"
+        android:text="More help"/>
+
+    <!-- SIT EDITTEXT -->
+    <EditText
+        android:id="@+id/sit_edit"
+        style="@style/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help_text"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:hint="4pm, at home, sorting laundry"
+        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp" />
+
+    <!-- SIT BUTTON -->
+    <Button
+        android:id="@+id/next_sit"
+        style="@style/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sit_edit" />
+
+</RelativeLayout>

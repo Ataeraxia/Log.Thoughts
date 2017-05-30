@@ -22,7 +22,8 @@
         <activity android:name=".ProActivity" />
         <activity android:name=".ConActivity" />
         <activity android:name=".AltActivity" />
-        <activity android:name=".NowActivity"></activity>
+        <activity android:name=".NowActivity" />
+        <activity android:name=".SitHelpActivity"></activity>
     </application>
 
 </manifest>

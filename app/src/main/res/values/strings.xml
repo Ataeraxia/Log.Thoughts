@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Log.Thoughts</string>
+
+    <string name="sit_display1">Situation</string>
+    <string name="next">next</string>
+    <string name="sit_sub">Who? What? When? Where?</string>
 </resources>
