@@ -9,6 +9,19 @@
     <color name="lightblue_400">#29B6F6</color>
     <color name="lightblue_600">#039BE5</color>
     <color name="lightblue_700">#0288D1</color>
+
+    <color name="yellow_50">#FFFDE7</color>
+    <color name="yellow_100">#FFF9C4</color>
+    <color name="yellow_700">#FBC02D</color>
+    <color name="yellow_900">#F57F17</color>
+
+    <color name="lightgreen_200">#C5E1A5</color>
+    <color name="lightgreen_800">#558B2F</color>
+
+    <color name="grey_400">#BDBDBD</color>
+
+    <color name="hint">#808080</color>
+    <color name="sub_text">#616161</color>
     <color name="text_on400">#FAFAFA</color>
     <color name="text_on200">#424242</color>
     <color name="yellow">#e6ee9c</color>

@@ -11,62 +11,35 @@
     <!-- SIT DISPLAY 1 -->
     <TextView
         android:id="@+id/sit_display1"
-        style="@style/display1_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        style="@style/display1"
         android:text="@string/sit_display1" />
 
     <!-- SIT SUBHEADING -->
     <TextView
         android:id="@+id/sit_sub"
-        style="@style/sub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/subheading"
         android:layout_below="@id/sit_display1"
         android:text="@string/sit_sub" />
 
-    <!-- HELP BUTTON TEXT THING -->
+    <!-- HELP TAPPABLE -->
     <TextView
         android:id="@+id/help_text"
-        android:layout_width="wrap_content"
-        android:minWidth="48dp"
-        android:minHeight="24dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginRight="72dp"
-        android:layout_marginEnd="72dp"
-        android:layout_below="@id/sit_sub"
+        style="@style/help_tap"
         android:textColor="@color/lightblue_700"
-        android:text="More help"/>
+        android:layout_below="@id/sit_sub"
+        android:text="@string/help_tap"/>
 
     <!-- SIT EDITTEXT -->
     <EditText
         android:id="@+id/sit_edit"
         style="@style/edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@id/help_text"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:hint="4pm, at home, sorting laundry"
-        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences"
-        android:paddingBottom="8dp"
-        android:paddingTop="16dp" />
+        android:hint="@string/sit_hint" />
 
     <!-- SIT BUTTON -->
     <Button
         android:id="@+id/next_sit"
         style="@style/next_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_below="@id/sit_edit" />
 
 </RelativeLayout>

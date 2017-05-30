@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow_100"
     android:orientation="vertical"
     tools:context="com.example.android.logthoughts.MoodsActivity">
 
+    <!-- DISPLAY 1 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Moods"
-        android:textSize="24sp" />
+        android:id="@+id/moods_display1"
+        style="@style/display1"
+        android:text="@string/moods_display1" />
 
+    <!-- SUBHEADING -->
+    <TextView
+        android:id="@+id/moods_sub"
+        style="@style/subheading"
+        android:layout_below="@id/moods_display1"
+        android:text="@string/moods_sub"/>
+
+    <!-- HELP TAPPABLE -->
+    <TextView
+        android:id="@+id/help_text"
+        style="@style/help_tap"
+        android:textColor="@color/yellow_900"
+        android:layout_below="@id/moods_sub"
+        android:text="@string/help_tap"/>
+
+    <!-- EDITTEXT -->
     <EditText
-        android:id="@+id/moods"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginTop="48dp"
-        android:hint="Angry 100%, confused 43%, anxious 14%"
-        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences" />
+        android:id="@+id/moods_edit"
+        style="@style/edittext"
+        android:layout_below="@id/help_text"
+        android:hint="@string/sit_hint" />
 
+    <!-- NEXT -->
     <Button
         android:id="@+id/next_moods"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next" />
+        style="@style/next_button"
+        android:layout_below="@id/moods_edit" />
 
-</LinearLayout>
+</RelativeLayout>

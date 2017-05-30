@@ -34,7 +34,7 @@ public class MoodsActivity extends AppCompatActivity {
             // The code in this method will be executed when the next button is clicked on.
             @Override
             public void onClick(View view) {
-                EditText getMoodsRecord = (EditText) findViewById(R.id.moods);
+                EditText getMoodsRecord = (EditText) findViewById(R.id.moods_edit);
                 String moodsRecord = getMoodsRecord.getText().toString();
 
                 Intent nextIntent = new Intent(MoodsActivity.this, AutoActivity.class);
