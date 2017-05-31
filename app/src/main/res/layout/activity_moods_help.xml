@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow_50"
     tools:context="com.example.android.logthoughts.MoodsHelp">
 
-</android.support.constraint.ConstraintLayout>
+    <!-- TECHNICAL ROOT LAYOUT -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADLINE -->
+        <!-- in MOODS HELP -->
+        <TextView
+            android:id="@+id/moods_help_head"
+            style="@style/headline_help_text"
+            android:text="@string/moods_head" />
+
+        <!-- START -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_start"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_head"
+            android:layout_marginTop="32dp"
+            android:text="@string/moods_help_start" />
+
+        <!-- SECOND -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_second"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_start"
+            android:layout_marginTop="32dp"
+            android:text="@string/moods_help_second" />
+
+        <!-- GOOD -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_good"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_second"
+            android:layout_marginTop="32dp"
+            android:text="@string/moods_help_good" />
+
+        <!-- BAD -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_bad"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_good"
+            android:layout_marginTop="32dp"
+            android:text="@string/moods_help_bad" />
+
+    </RelativeLayout>
+
+</ScrollView>
