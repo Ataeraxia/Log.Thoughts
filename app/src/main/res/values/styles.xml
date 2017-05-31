@@ -45,6 +45,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">72dp</item>
         <item name="android:layout_marginStart">72dp</item>
+        <item name="android:layout_marginRight">72dp</item>
+        <item name="android:layout_marginEnd">72dp</item>
     </style>
 
     <!-- Help tappable style -->

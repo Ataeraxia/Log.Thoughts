@@ -34,7 +34,7 @@
         android:id="@+id/moods_edit"
         style="@style/edittext"
         android:layout_below="@id/help_text"
-        android:hint="@string/sit_hint" />
+        android:hint="@string/moods_hint" />
 
     <!-- NEXT -->
     <Button

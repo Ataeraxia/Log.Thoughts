@@ -1,4 +1,9 @@
 <resources>
+
+    <!-- % character: &#37; -->
+    <!-- - character: &#8211; -->
+    <!-- : character: &#58; -->
+
     <string name="app_name">Log.Thoughts</string>
 
     <!-- Main Activities -->
@@ -12,8 +17,8 @@
 
     <!-- Moods Activity -->
     <string name="moods_display1">Moods</string>
-    <string name="moods_sub">Who? What? When? Where?</string>
-    <string name="moods_hint">4pm. At home, sorting laundry.</string>
+    <string name="moods_sub">List your moods and rate them on a scaled of 0&#8211;100.</string>
+    <string name="moods_hint">Anxious 60&#37;\nAngry 25&#37;\nTense muscles 15&#37;</string>
 
     <!-- Auto Activity -->
     <string name="auto_display1">Automatic Thoughts and Images</string>
@@ -33,11 +38,29 @@
     <!-- Sit Help -->
     <string name="sit_head">Describing your situation</string>
     <string name="sit_help_text_start">When describing your situation, be as descriptive as possible. It\'s important to note your surroundings.</string>
-    <string name="sit_help_text_questart">A few helpful questions you can ask yourself are:</string>
+    <string name="sit_help_text_questart">A few helpful questions you can ask yourself are&#58;</string>
     <string name="sit_help_text_quests">1. Who was I with?\n2. What was I doing?\n3. When did it happen?\n4. Where was I?</string>
     <string name="sit_help_text_time">Include a specific time frame that does not exceed 30 minutes. For example, there are too many different situations, emotions, and thoughts that can occur \"all day Tuesday.\" A better description might be \"Tuesday at noon.\"</string>
-    <string name="sit_help_text_good">Good example:\n"Friday morning at 8. Making coffee. Kids are getting ready for school. Husband is watching the news."</string>
-    <string name="sit_help_text_bad">Bad example:\n"Friday before work. Very loud. Irritated at husband."</string>
+    <string name="sit_help_text_good">Good example&#58;\n\"Friday morning at 8. Making coffee. Kids are getting ready for school. Husband is watching the news.\"</string>
+    <string name="sit_help_text_bad">Bad example&#58;\n"Friday before work. Very loud. Irritated at husband."</string>
+
+    <!-- Moods Help -->
+    <string name="moods_head">Rating your moods</string>
+    <string name="moods_help_start">List the moods you were experiencing in the situation you described. It\'s natural to experience more than one mood in any situation. You should also rate the intensity of the moods on a scale of 0&#8211;100. For example, \"Anxious 60&#37;\" is a good way of rating your mood, but \"Feeling very empty\" needs some work. If you experience a lot of anxiety, it may be helpful to rate your physical symptoms as well. For example, \"Increased heart rate 65&#37;.\"</string>
+    <string name="moods_help_second">Moods are more than simply feeling \"bad\" or \"good.\" They can also be easily confused with thoughts. As a rule of thumb, if you\'re describing a mood in more than one word, you should ask yourself whether it\'s really a mood, or more of a thought. For example, you might feel tense and nervous and out of control, when the mood you\'re experiencing is anxiety. Or, you may feel hollow, numb and heavy when the mood you\'re experiencing is depression.</string>
+    <string name="moods_help_good">What it should look like&#58;\n \"Anxious 25&#37;\"\n\"Angry 70&#37;\"\n\"Tense muscles 30&#37;\"</string>
+    <string name="moods_help_bad">What it shouldn\'t look like&#58;\n\"Mad at myself 20&#37;\"\n\"Angry all the time\"\n\"Sick with the flu\"</string>
+
+    <!-- Auto Help -->
+
+    <!-- Pro Help -->
+
+    <!-- Con Help -->
+
+    <!-- Alt Help -->
+
+    <!-- Now Help -->
+
     <!-- End Help Activities -->
 
 
