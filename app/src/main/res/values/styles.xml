@@ -58,7 +58,7 @@
         <item name="android:layout_marginLeft">72dp</item>
         <item name="android:layout_marginStart">72dp</item>
         <item name="android:layout_marginEnd">64dp</item>
-        <item name="android:layout_marginLeft">64dp</item>
+        <item name="android:layout_marginRight">64dp</item>
     </style>
 
     <!-- EditText style -->
