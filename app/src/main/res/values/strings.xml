@@ -46,10 +46,20 @@
 
     <!-- Moods Help -->
     <string name="moods_head">Rating your moods</string>
-    <string name="moods_help_start">List the moods you were experiencing in the situation you described. It\'s natural to experience more than one mood in any situation. You should also rate the intensity of the moods on a scale of 0&#8211;100. For example, \"Anxious 60%%\" is a good way of rating your mood, but \"Feeling very empty\" needs some work. If you experience a lot of anxiety, it may be helpful to rate your physical symptoms as well. For example, \"Increased heart rate 65%%.\"</string>
-    <string name="moods_help_second">Moods are more than simply feeling \"bad\" or \"good.\" They can also be easily confused with thoughts. As a rule of thumb, if you\'re describing a mood in more than one word, you should ask yourself whether it\'s really a mood, or more of a thought. For example, you might feel tense and nervous and out of control, when the mood you\'re experiencing is anxiety. Or, you may feel hollow, numb and heavy when the mood you\'re experiencing is depression.</string>
-    <string name="moods_help_good">What it should look like&#58;\n \"Anxious 25%%\"\n\"Angry 70%%\"\n\"Tense muscles 30%%\" </string>
-    <string name="moods_help_bad">What it shouldn\'t look like&#58;\n\"Mad at myself 20%%\"\n\"Angry all the time\"\n\"Sick with the flu\" </string>
+    <string name="moods_help_start">List the moods you were experiencing in the situation you described. It\'s natural to experience more than one mood in any situation. You should also rate the intensity of the moods on a scale of 0&#8211;100.</string>
+    <string name="moods_help_phys">If you experience a lot of anxiety, it may be helpful to rate your physical symptoms as well.</string>
+    <string name="moods_help_prex">For example&#58;</string>
+    <string name="moods_help_ex" formatted="false">\"Increased heart rate 65%.\"</string>
+    <string name="moods_help_def">Moods are more than simply feeling \"bad\" or \"good.\" They can also be easily confused with thoughts. As a rule of thumb, if you\'re describing a mood in more than one word, you should ask yourself whether it\'s really a mood, or more of a thought.</string>
+    <string name="moods_help_defex">For example, you might feel tense and nervous and out of control, when the mood you\'re experiencing is anxiety. Or, you may feel hollow, numb and heavy when the mood you\'re experiencing is depression.</string>
+    <string name="moods_help_good">What it should look like&#58;</string>
+    <string name="moods_help_goodex1" formatted="false">\"Anxious 25%\"</string>
+    <string name="moods_help_goodex2" formatted="false">\"Angry 70%\"</string>
+    <string name="moods_help_goodex3" formatted="false">\"Tense muscles 30%\"</string>
+    <string name="moods_help_bad">What it shouldn\'t look like&#58;</string>
+    <string name="moods_help_badex1" formatted="false">\"Mad at myself 20%\"</string>
+    <string name="moods_help_badex2" formatted="false">\"Angry all the time\"</string>
+    <string name="moods_help_badex3" formatted="false">\"Sick with the flu\"</string>
 
     <!-- Auto Help -->
 

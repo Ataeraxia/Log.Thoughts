@@ -19,6 +19,9 @@
             style="@style/headline_help_text"
             android:text="@string/moods_head" />
 
+
+        <!-- START VIEWS -->
+
         <!-- START -->
         <!-- in MOODS HELP TEXT BODY 1 -->
         <TextView
@@ -28,32 +31,130 @@
             android:layout_marginTop="32dp"
             android:text="@string/moods_help_start" />
 
-        <!-- SECOND -->
+        <!-- PHYS -->
         <!-- in MOODS HELP TEXT BODY 1 -->
         <TextView
-            android:id="@+id/moods_help_second"
+            android:id="@+id/moods_help_phys"
             style="@style/body_help_text"
             android:layout_below="@id/moods_help_start"
-            android:layout_marginTop="32dp"
-            android:text="@string/moods_help_second" />
+            android:text="@string/moods_help_phys" />
+
+        <!-- PREX -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_prex"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_phys"
+            android:text="@string/moods_help_prex" />
+
+        <!-- EX -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_ex"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_prex"
+            android:layout_marginTop="0dp"
+            android:text="@string/moods_help_ex" />
+        <!-- END START VIEWS -->
+
+
+        <!-- DEF VIEWS -->
+
+        <!-- DEF -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_def"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_ex"
+            android:text="@string/moods_help_def" />
+
+        <!-- DEFEX -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_defex"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_def"
+            android:text="@string/moods_help_defex" />
+        <!-- END DEF VIEWS -->
+
+
+        <!-- GOOD VIEWS -->
 
         <!-- GOOD -->
         <!-- in MOODS HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/moods_help_good"
             style="@style/body_help_text"
-            android:layout_below="@id/moods_help_second"
+            android:layout_below="@id/moods_help_defex"
             android:layout_marginTop="32dp"
             android:text="@string/moods_help_good" />
+
+        <!-- GOODEX1 -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_goodex1"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_good"
+            android:layout_marginTop="8dp"
+            android:text="@string/moods_help_goodex1" />
+
+        <!-- GOODEX2 -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_goodex2"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_goodex1"
+            android:layout_marginTop="0dp"
+            android:text="@string/moods_help_goodex2" />
+
+        <!-- GOODEX3 -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_goodex3"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_goodex2"
+            android:layout_marginTop="0dp"
+            android:text="@string/moods_help_goodex3" />
+        <!-- END GOOD VIEWS -->
+
+
+        <!-- BAD VIEWS -->
 
         <!-- BAD -->
         <!-- in MOODS HELP TEXT BODY 1 -->
         <TextView
             android:id="@+id/moods_help_bad"
             style="@style/body_help_text"
-            android:layout_below="@id/moods_help_good"
+            android:layout_below="@id/moods_help_goodex3"
             android:layout_marginTop="32dp"
             android:text="@string/moods_help_bad" />
+
+        <!-- BADEX1 -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_badex1"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_bad"
+            android:layout_marginTop="8dp"
+            android:text="@string/moods_help_badex1" />
+
+        <!-- BADEX2 -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_badex2"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_badex1"
+            android:layout_marginTop="0dp"
+            android:text="@string/moods_help_badex2" />
+
+        <!-- BADEX3 -->
+        <!-- in MOODS HELP TEXT BODY 1 -->
+        <TextView
+            android:id="@+id/moods_help_badex3"
+            style="@style/body_help_text"
+            android:layout_below="@id/moods_help_badex2"
+            android:layout_marginTop="0dp"
+            android:text="@string/moods_help_badex3" />
 
     </RelativeLayout>
 
