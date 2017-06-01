@@ -1,6 +1,6 @@
 <resources>
 
-    <!-- % character: &#37; -->
+    <!-- % character: &#37; DO NOT USE -->
     <!-- - character: &#8211; -->
     <!-- : character: &#58; -->
 
@@ -18,7 +18,7 @@
     <!-- Moods Activity -->
     <string name="moods_display1">Moods</string>
     <string name="moods_sub">List your moods and rate them on a scaled of 0&#8211;100.</string>
-    <string name="moods_hint">Anxious 60%%\nAngry 25%%\nTense muscles 15%%</string>
+    <string name="moods_hint" formatted="false">Anxious 60%\nAngry 25%\nTense muscles 15%</string>
 
     <!-- Auto Activity -->
     <string name="auto_display1">Automatic Thoughts and Images</string>

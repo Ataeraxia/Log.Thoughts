@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MoodsActivity extends AppCompatActivity {
 
@@ -41,6 +42,17 @@ public class MoodsActivity extends AppCompatActivity {
                 nextIntent = nextIntent.putExtra("com.example.android.logthoughts.sitRecord", sitRecord);
                 nextIntent = nextIntent.putExtra("com.example.android.logthoughts.moodsRecord", moodsRecord);
                 startActivity(nextIntent);
+            }
+        });
+
+        final TextView moodsHelpText = (TextView) findViewById(R.id.help_text);
+
+        moodsHelpText.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent moodsHelpIntent = new Intent(MoodsActivity.this, MoodsHelp.class);
+                startActivity(moodsHelpIntent);
             }
         });
     }

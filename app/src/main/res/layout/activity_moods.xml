@@ -33,6 +33,7 @@
     <EditText
         android:id="@+id/moods_edit"
         style="@style/edittext"
+        android:backgroundTint="@color/yellow_700"
         android:layout_below="@id/help_text"
         android:hint="@string/moods_hint" />
 
