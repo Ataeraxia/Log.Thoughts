@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/orange_200"
     android:orientation="vertical"
-    tools:context="com.example.android.logthoughts.AutoActivity">
+    tools:context="com.example.android.logthoughts.AltActivity">
 
+    <!-- DISPLAY 1 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Alternative/Balanced Thoughts"
-        android:textSize="24sp" />
+        android:id="@+id/alt_display1"
+        style="@style/display1"
+        android:text="@string/alt_display1" />
 
+    <!-- SUBHEADING -->
+    <TextView
+        android:id="@+id/alt_sub"
+        style="@style/subheading"
+        android:layout_below="@id/alt_display1"
+        android:text="@string/alt_sub"/>
+
+    <!-- HELP TAPPABLE -->
+    <TextView
+        android:id="@+id/help_text"
+        style="@style/help_tap"
+        android:textColor="@color/orange_800"
+        android:layout_below="@id/alt_sub"
+        android:text="@string/help_tap"/>
+
+    <!-- EDITTEXT -->
     <EditText
         android:id="@+id/alt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginTop="48dp"
-        android:hint="Things haven't gone well lately, but I know tomorrow will be better"
-        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences" />
+        style="@style/edittext"
+        android:backgroundTint="@color/orange_800"
+        android:layout_below="@id/help_text"
+        android:hint="@string/alt_hint" />
 
+    <!-- NEXT -->
     <Button
         android:id="@+id/next_alt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next" />
+        style="@style/next_button"
+        android:layout_below="@id/alt" />
 
-</LinearLayout>
+</RelativeLayout>

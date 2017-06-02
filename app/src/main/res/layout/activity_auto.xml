@@ -11,11 +11,7 @@
     <!-- DISPLAY 1 -->
     <TextView
         android:id="@+id/auto_display1"
-        style="@style/headline_help_text"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginRight="72dp"
-        android:layout_marginEnd="72dp"
+        style="@style/display1"
         android:text="@string/auto_display1" />
 
     <!-- SUBHEADING -->
@@ -23,7 +19,7 @@
         android:id="@+id/auto_sub"
         style="@style/subheading"
         android:layout_below="@id/auto_display1"
-        android:text="@string/moods_sub"/>
+        android:text="@string/auto_sub"/>
 
     <!-- HELP TAPPABLE -->
     <TextView
@@ -37,13 +33,29 @@
     <EditText
         android:id="@+id/auto"
         style="@style/edittext"
+        android:backgroundTint="@color/lightgreen_800"
         android:layout_below="@id/help_text"
-        android:hint="@string/sit_hint" />
+        android:hint="@string/auto_hint" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/auto_hotlayout"
+        android:layout_width="match_parent"
+        android:layout_below="@id/auto"
+        android:layout_height="wrap_content">
+
+    <!-- EDITTEXT -->
+    <EditText
+        android:id="@+id/auto_hot"
+        style="@style/edittext"
+        android:backgroundTint="@color/lightgreen_800"
+        android:hint="@string/hot_thought" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <!-- NEXT -->
     <Button
         android:id="@+id/next_auto"
         style="@style/next_button"
-        android:layout_below="@id/auto" />
+        android:layout_below="@id/auto_hotlayout" />
 
 </RelativeLayout>

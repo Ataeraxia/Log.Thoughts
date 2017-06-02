@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink_100"
     android:orientation="vertical"
-    tools:context="com.example.android.logthoughts.AutoActivity">
+    tools:context="com.example.android.logthoughts.NowActivity">
 
+    <!-- DISPLAY 1 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Rate moods now"
-        android:textSize="24sp" />
+        android:id="@+id/now_display1"
+        style="@style/display1"
+        android:text="@string/now_display1" />
 
+    <!-- SUBHEADING -->
+    <TextView
+        android:id="@+id/now_sub"
+        style="@style/subheading"
+        android:layout_below="@id/now_display1"
+        android:text="@string/now_sub"/>
+
+    <!-- HELP TAPPABLE -->
+    <TextView
+        android:id="@+id/help_text"
+        style="@style/help_tap"
+        android:textColor="@color/pink_400"
+        android:layout_below="@id/now_sub"
+        android:text="@string/help_tap"/>
+
+    <!-- EDITTEXT -->
     <EditText
         android:id="@+id/now"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginTop="48dp"
-        android:hint="Angry 20%, anxious 5%"
-        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences" />
+        style="@style/edittext"
+        android:backgroundTint="@color/pink_400"
+        android:layout_below="@id/help_text"
+        android:hint="@string/now_hint" />
 
+    <!-- NEXT -->
     <Button
         android:id="@+id/next_now"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next" />
+        style="@style/next_button"
+        android:layout_below="@id/now" />
 
-</LinearLayout>
+</RelativeLayout>

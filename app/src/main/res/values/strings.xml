@@ -17,20 +17,34 @@
 
     <!-- Moods Activity -->
     <string name="moods_display1">Moods</string>
-    <string name="moods_sub">List your moods and rate them on a scaled of 0&#8211;100.</string>
+    <string name="moods_sub">List your moods and rate them on a scale of 0&#8211;100.</string>
     <string name="moods_hint" formatted="false">Anxious 60%\nAngry 25%\nTense muscles 15%</string>
 
     <!-- Auto Activity -->
-    <string name="auto_display1">Automatic Thoughts and Images</string>
+    <string name="auto_display1">Thoughts and Images</string>
+    <string name="auto_sub">Write down the first thoughts and images that come to mind. Choose one as your \'Hot Thought.\'</string>
+    <string name="auto_hint" formatted="false">I\'m just not good enough</string>
+    <string name="hot_thought">Write your Hot Thought here</string>
 
     <!-- Pro Activity -->
+    <string name="pro_display1">Evidence For the Hot Thought</string>
+    <string name="pro_sub">Factual information that proves that the Hot Thought might be true.</string>
+    <string name="pro_hint" formatted="false">I\'ve seen this happen before</string>
 
     <!-- Con Activity -->
+    <string name="con_display1">Evidence Against the Hot Thought</string>
+    <string name="con_sub">Factual information that proves that the Hot Thought might be false.</string>
+    <string name="con_hint" formatted="false">Things can always change</string>
 
     <!-- Alt Activity -->
+    <string name="alt_display1">Balanced Thoughts</string>
+    <string name="alt_sub">Use your evidence for and evidence against your Hot Thought to write down some balanced or alternative thoughts.</string>
+    <string name="alt_hint" formatted="false">Things haven\'t gone well lately, but I know tomorrow will be better</string>
 
     <!-- Now Activity -->
-
+    <string name="now_display1">Moods Now</string>
+    <string name="now_sub">List your moods after doing this activity and rate them on a scale of 0&#8211;100.</string>
+    <string name="now_hint" formatted="false">Anxious 40%\nAngry 0%\nTense muscles 10%</string>
     <!-- End Main Activities -->
 
     <!-- Help Activities -->

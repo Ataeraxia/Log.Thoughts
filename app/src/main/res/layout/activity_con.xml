@@ -1,34 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_200"
     android:orientation="vertical"
-    tools:context="com.example.android.logthoughts.AutoActivity">
+    tools:context="com.example.android.logthoughts.ConActivity">
 
+    <!-- DISPLAY 1 -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Evidence that does not support the Hot Thought"
-        android:textSize="24sp" />
+        android:id="@+id/con_display1"
+        style="@style/headline_help_text"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginEnd="72dp"
+        android:text="@string/con_display1" />
 
+    <!-- SUBHEADING -->
+    <TextView
+        android:id="@+id/con_sub"
+        style="@style/subheading"
+        android:layout_below="@id/con_display1"
+        android:text="@string/con_sub"/>
+
+    <!-- HELP TAPPABLE -->
+    <TextView
+        android:id="@+id/help_text"
+        style="@style/help_tap"
+        android:textColor="@color/teal_800"
+        android:layout_below="@id/con_sub"
+        android:text="@string/help_tap"/>
+
+    <!-- EDITTEXT -->
     <EditText
         android:id="@+id/con"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginTop="48dp"
-        android:hint="Things can always change"
-        android:inputType="text|textMultiLine|textAutoCorrect|textCapSentences" />
+        style="@style/edittext"
+        android:backgroundTint="@color/teal_800"
+        android:layout_below="@id/help_text"
+        android:hint="@string/con_hint" />
 
+    <!-- NEXT -->
     <Button
         android:id="@+id/next_con"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next" />
+        style="@style/next_button"
+        android:layout_below="@id/con" />
 
-</LinearLayout>
+</RelativeLayout>

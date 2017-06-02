@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.logthoughts.SummaryActivity"
     android:layout_height="match_parent"
-    android:layout_width="match_parent" >
+    android:layout_width="match_parent"
+    android:background="@color/bluegrey_100">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -15,139 +16,99 @@
 
     <!-- SUMMARY HEADLINE -->
     <TextView
+        style="@style/headline_help_text"
+        android:text="Thought Record Summary"/>
+
+    <!-- SCREENSHOT EXPLAIN -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thought Record Summary"
-        android:textSize="24sp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"/>
+        style="@style/body_help_text"
+        android:text="We're still working on a way to store your Thought Records in-app. For now, please screenshot this page."/>
 
     <!-- SITUATION TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Situation"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Situation" />
 
     <!-- SITUATION BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/sit_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- MOODS TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Moods"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Moods"/>
 
     <!-- MOODS BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/moods_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- AUTO TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Automatic Thoughts"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Automatic Thoughts"/>
 
     <!-- AUTO BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/auto_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- PRO TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Evidence That Supports the Hot Thought"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Evidence That Supports the Hot Thought"/>
 
     <!-- PRO BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/pro_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- CON TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Evidence That Does Not Support the Hot Thought"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Evidence That Does Not Support the Hot Thought"/>
 
     <!-- CON BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/con_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- ALT TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Alternative/Balanced Thoughts"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Alternative/Balanced Thoughts"/>
 
     <!-- ALT BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/alt_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- NOW TITLE -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
-        android:text="Moods After Completing Log.Thoughts"
-        android:textSize="20sp"/>
+        style="@style/summary_title"
+        android:text="Moods After Completing Log.Thoughts"/>
 
     <!-- NOW BODY 1 -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/body_summary_text"
         android:id="@+id/now_summary_text"
-        android:textSize="14sp"
         tools:text="Lots of the text stuff" />
 
     <!-- RESTART BUTTON -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/MarginStyleMiddle"
+        style="@style/next_button"
+        android:layout_gravity="center_horizontal"
         android:text="restart"
         android:onClick="restartThoughtRecord"/>
 
