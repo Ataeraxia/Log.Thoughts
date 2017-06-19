@@ -18,14 +18,16 @@ public class MoodsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_moods);
 
         if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
+            Bundle thought = getIntent().getExtras();
+            if(thought == null) {
                 sitRecord = "Nothing to see here";
             } else {
-                sitRecord = extras.getString("com.example.android.logthoughts.sitRecord");
+                sitRecord = thought.getString("com.example.android.logthoughts.sitRecord");
             }
         } else {
-            sitRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
+            // TODO: Figure out how savedInstanceState works and clean up this code
+            Bundle thought = getIntent().getExtras();
+            sitRecord = thought.getString("com.example.android.logthoughts.sitRecord");
         }
 
         Button nextMoodsButton = (Button) findViewById(R.id.next_moods);
@@ -36,6 +38,7 @@ public class MoodsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText getMoodsRecord = (EditText) findViewById(R.id.moods_edit);
+                Thoughts thoughts = new Thoughts(sitRecord);
                 String moodsRecord = getMoodsRecord.getText().toString();
 
                 Intent nextIntent = new Intent(MoodsActivity.this, AutoActivity.class);

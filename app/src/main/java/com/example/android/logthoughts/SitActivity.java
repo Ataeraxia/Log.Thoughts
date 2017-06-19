@@ -23,10 +23,11 @@ public class SitActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText getSitRecord = (EditText) findViewById(R.id.sit_edit);
-                String sitRecord = getSitRecord.getText().toString();
+                Bundle thought = new Bundle();
+                thought.putString("com.example.android.logthoughts.sitRecord", getSitRecord.getText().toString());
 
                 Intent nextIntent = new Intent(SitActivity.this, MoodsActivity.class);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.sitRecord", sitRecord);
+                nextIntent = nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }
         });
