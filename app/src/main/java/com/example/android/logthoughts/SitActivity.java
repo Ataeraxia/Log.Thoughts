@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+// TODO: Add EditText for place
+// TODO: Add EditText for time
+// TODO: Call and response format? | What time is it? [EditText]
 public class SitActivity extends AppCompatActivity {
 
     @Override
@@ -22,11 +26,14 @@ public class SitActivity extends AppCompatActivity {
             // The code in this method will be executed when the next button is clicked on.
             @Override
             public void onClick(View view) {
-                EditText getSitRecord = (EditText) findViewById(R.id.sit_edit);
+                // Vars
+                EditText sitText = (EditText) findViewById(R.id.sit_edit);
                 Bundle thought = new Bundle();
-                thought.putString("com.example.android.logthoughts.sitRecord", getSitRecord.getText().toString());
-
+                String sitThought = sitText.getText().toString();
                 Intent nextIntent = new Intent(SitActivity.this, MoodsActivity.class);
+
+                //Action
+                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
                 nextIntent = nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }

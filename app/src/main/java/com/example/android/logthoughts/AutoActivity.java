@@ -14,21 +14,23 @@ public class AutoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto);
 
-        final String sitRecord;
-        final String moodsRecord;
+        final String sitThought;
+        final String moodsThought;
 
         if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                sitRecord = "Nothing to see here";
-                moodsRecord = "Nothing to see here";
+            Bundle thought = getIntent().getExtras();
+            if(thought == null) {
+                sitThought = "Nothing to see here";
+                moodsThought = "Nothing to see here";
             } else {
-                sitRecord = extras.getString("com.example.android.logthoughts.sitRecord");
-                moodsRecord = extras.getString("com.example.android.logthoughts.moodsRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+                moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
             }
         } else {
-            sitRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
-            moodsRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.moodsRecord");
+            // TODO: Figure out how savedInstanceState works and clean up this code
+            Bundle thought = getIntent().getExtras();
+            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+            moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
         }
 
         Button nextAutoButton = (Button) findViewById(R.id.next_auto);
@@ -38,13 +40,17 @@ public class AutoActivity extends AppCompatActivity {
             // The code in this method will be executed when the next button is clicked on.
             @Override
             public void onClick(View view) {
-                EditText getAutoRecord = (EditText) findViewById(R.id.auto);
-                String autoRecord = getAutoRecord.getText().toString();
-
+                //Vars
+                EditText autoText = (EditText) findViewById(R.id.auto);
+                Bundle thought = new Bundle();
+                String autoThought = autoText.getText().toString();
                 Intent nextIntent = new Intent(AutoActivity.this, ProActivity.class);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.sitRecord", sitRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.moodsRecord", moodsRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.autoRecord", autoRecord);
+
+                //Action
+                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
+                thought.putString("com.example.android.logthoughts.moodsRecord", moodsThought);
+                thought.putString("com.example.android.logthoughts.autoRecord", autoThought);
+                nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }
         });

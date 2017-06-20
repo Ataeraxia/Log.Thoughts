@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MoodsActivity extends AppCompatActivity {
 
-    String sitRecord;
+    String sitThought;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,14 @@ public class MoodsActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle thought = getIntent().getExtras();
             if(thought == null) {
-                sitRecord = "Nothing to see here";
+                sitThought = "Nothing to see here";
             } else {
-                sitRecord = thought.getString("com.example.android.logthoughts.sitRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
             }
         } else {
             // TODO: Figure out how savedInstanceState works and clean up this code
             Bundle thought = getIntent().getExtras();
-            sitRecord = thought.getString("com.example.android.logthoughts.sitRecord");
+            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
         }
 
         Button nextMoodsButton = (Button) findViewById(R.id.next_moods);
@@ -37,13 +37,16 @@ public class MoodsActivity extends AppCompatActivity {
             // The code in this method will be executed when the next button is clicked on.
             @Override
             public void onClick(View view) {
+                //Vars
                 EditText getMoodsRecord = (EditText) findViewById(R.id.moods_edit);
-                Thoughts thoughts = new Thoughts(sitRecord);
-                String moodsRecord = getMoodsRecord.getText().toString();
-
+                Bundle thought = new Bundle();
+                String moodsThought = getMoodsRecord.getText().toString();
                 Intent nextIntent = new Intent(MoodsActivity.this, AutoActivity.class);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.sitRecord", sitRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.moodsRecord", moodsRecord);
+
+                //Action
+                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
+                thought.putString("com.example.android.logthoughts.moodsRecord", moodsThought);
+                nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }
         });

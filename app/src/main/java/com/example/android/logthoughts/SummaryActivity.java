@@ -1,16 +1,21 @@
 package com.example.android.logthoughts;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *  SummaryActivity shows the user the answers they gave in the first 7 activities.
  *  Until the app is fixed to store the user's forms in the app (whether using SQL or text files),
  *      the user is expected to take a screenshot of this activity.
  *
- *  String recordSummaryNull stores whether or not the extras bundle was null.
+ *  String thoughtsNull stores whether or not the extras bundle was null.
  *  Strings ending in RecordSummary store the answers for each of the 7 activities.
  *
  *  In the onCreate method, we set the content view to be the activity_summary xml layout.
@@ -18,7 +23,7 @@ import android.widget.TextView;
  *  If the activity has been loaded previously, we get the answers to the 7 activities through
  *      the savedInstanceState.
  *  If the activity has not been loaded previously, we check to see if the extras bundle is null.
- *  If the extras bundle is null, we set recordSummaryNull to "Nothing to see here".
+ *  If the extras bundle is null, we set thoughtsNull to "Nothing to see here".
  *  If the extras bundle is not null, we get the answers to the 7 previous activities from
  *      the extras bundle, and store them in the global String variables ending in RecordSummary.
  *  We then run the displayRecordSummary() series of methods.
@@ -26,14 +31,14 @@ import android.widget.TextView;
  */
 public class SummaryActivity extends AppCompatActivity {
 
-    String recordSummaryNull;
-    String sitRecordSummary;
-    String moodsRecordSummary;
-    String autoRecordSummary;
-    String proRecordSummary;
-    String conRecordSummary;
-    String altRecordSummary;
-    String nowRecordSummary;
+    String thoughtsNull;
+    String sitThought;
+    String moodsThought;
+    String autoThought;
+    String proThought;
+    String conThought;
+    String altThought;
+    String nowThought;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,26 +47,28 @@ public class SummaryActivity extends AppCompatActivity {
 
 
         if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                recordSummaryNull = "Nothing to see here";
+            Bundle thought = getIntent().getExtras();
+            if(thought == null) {
+                thoughtsNull = "Nothing to see here";
             } else {
-                sitRecordSummary = extras.getString("com.example.android.logthoughts.sitRecord");
-                moodsRecordSummary = extras.getString("com.example.android.logthoughts.moodsRecord");
-                autoRecordSummary = extras.getString("com.example.android.logthoughts.autoRecord");
-                proRecordSummary = extras.getString("com.example.android.logthoughts.proRecord");
-                conRecordSummary = extras.getString("com.example.android.logthoughts.conRecord");
-                altRecordSummary = extras.getString("com.example.android.logthoughts.altRecord");
-                nowRecordSummary = extras.getString("com.example.android.logthoughts.nowRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+                moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
+                autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
+                proThought = thought.getString("com.example.android.logthoughts.proRecord");
+                conThought = thought.getString("com.example.android.logthoughts.conRecord");
+                altThought = thought.getString("com.example.android.logthoughts.altRecord");
+                nowThought = thought.getString("com.example.android.logthoughts.nowRecord");
             }
         } else {
-            sitRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
-            moodsRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.moodsRecord");
-            autoRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.autoRecord");
-            proRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.proRecord");
-            conRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.conRecord");
-            altRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.altRecord");
-            nowRecordSummary = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.nowRecord");
+            // TODO: Figure out how savedInstanceState works and clean up this code
+            Bundle thought = getIntent().getExtras();
+            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+            moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
+            autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
+            proThought = thought.getString("com.example.android.logthoughts.proRecord");
+            conThought = thought.getString("com.example.android.logthoughts.conRecord");
+            altThought = thought.getString("com.example.android.logthoughts.altRecord");
+            nowThought = thought.getString("com.example.android.logthoughts.nowRecord");
         }
 
         displaySitRecordSummary();
@@ -71,52 +78,72 @@ public class SummaryActivity extends AppCompatActivity {
         displayConRecordSummary();
         displayAltRecordSummary();
         displayNowRecordSummary();
+
+        // Save the thought record at this step
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+        Date now = new Date();
+        String filename = "ThoughtRecord_"+formatter.format(now);
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(sitThought.getBytes());
+            outputStream.write(moodsThought.getBytes());
+            outputStream.write(autoThought.getBytes());
+            outputStream.write(proThought.getBytes());
+            outputStream.write(conThought.getBytes());
+            outputStream.write(altThought.getBytes());
+            outputStream.write(nowThought.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void displaySitRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.sit_summary_text);
-        summaryTextView.setText(sitRecordSummary);
+        summaryTextView.setText(sitThought);
     }
 
     private void displayMoodsRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.moods_summary_text);
-        summaryTextView.setText(moodsRecordSummary);
+        summaryTextView.setText(moodsThought);
     }
 
     private void displayAutoRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.auto_summary_text);
-        summaryTextView.setText(autoRecordSummary);
+        summaryTextView.setText(autoThought);
     }
 
     private void displayProRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.pro_summary_text);
-        summaryTextView.setText(proRecordSummary);
+        summaryTextView.setText(proThought);
     }
 
     private void displayConRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.con_summary_text);
-        summaryTextView.setText(conRecordSummary);
+        summaryTextView.setText(conThought);
     }
 
     private void displayAltRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.alt_summary_text);
-        summaryTextView.setText(altRecordSummary);
+        summaryTextView.setText(altThought);
     }
 
     private void displayNowRecordSummary() {
         TextView summaryTextView = (TextView) findViewById(R.id.now_summary_text);
-        summaryTextView.setText(nowRecordSummary);
+        summaryTextView.setText(nowThought);
     }
 
     public void restartThoughtRecord() {
-        recordSummaryNull = null;
-        sitRecordSummary = null;
-        moodsRecordSummary = null;
-        autoRecordSummary = null;
-        proRecordSummary = null;
-        conRecordSummary = null;
-        altRecordSummary = null;
-        nowRecordSummary = null;
+        thoughtsNull = null;
+        sitThought = null;
+        moodsThought = null;
+        autoThought = null;
+        proThought = null;
+        conThought = null;
+        altThought = null;
+        nowThought = null;
 
         Intent nextIntent = new Intent(SummaryActivity.this, SitActivity.class);
         startActivity(nextIntent);

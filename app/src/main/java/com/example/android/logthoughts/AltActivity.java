@@ -14,35 +14,35 @@ public class AltActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alt);
 
-        final String sitRecord;
-        final String moodsRecord;
-        final String autoRecord;
-        final String proRecord;
-        final String conRecord;
+        final String sitThought;
+        final String moodsThought;
+        final String autoThought;
+        final String proThought;
+        final String conThought;
 
         if (savedInstanceState == null) {
-            Bundle extras = getIntent().getExtras();
-            if(extras == null) {
-                sitRecord = "Nothing to see here";
-                moodsRecord = "Nothing to see here";
-                autoRecord = "Nothing to see here";
-                proRecord = "Nothing to see here";
-                conRecord = "Nothing to see here";
+            Bundle thought = getIntent().getExtras();
+            if(thought == null) {
+                sitThought = "Nothing to see here";
+                moodsThought = "Nothing to see here";
+                autoThought = "Nothing to see here";
+                proThought = "Nothing to see here";
+                conThought = "Nothing to see here";
             } else {
-                sitRecord = extras.getString("com.example.android.logthoughts.sitRecord");
-                moodsRecord = extras.getString("com.example.android.logthoughts.moodsRecord");
-                autoRecord = extras.getString("com.example.android.logthoughts.autoRecord");
-                proRecord = extras.getString("com.example.android.logthoughts.proRecord");
-                conRecord = extras.getString("com.example.android.logthoughts.conRecord");
-
+                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+                moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
+                autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
+                proThought = thought.getString("com.example.android.logthoughts.proRecord");
+                conThought = thought.getString("com.example.android.logthoughts.conRecord");
             }
         } else {
-            sitRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.sitRecord");
-            moodsRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.moodsRecord");
-            autoRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.autoRecord");
-            proRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.proRecord");
-            conRecord = (String) savedInstanceState.getSerializable("com.example.android.logthoughts.conRecord");
-
+            // TODO: Figure out how savedInstanceState works and clean up this code
+            Bundle thought = getIntent().getExtras();
+            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+            moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
+            autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
+            proThought = thought.getString("com.example.android.logthoughts.proRecord");
+            conThought = thought.getString("com.example.android.logthoughts.conRecord");
         }
 
         Button nextAltButton = (Button) findViewById(R.id.next_alt);
@@ -52,16 +52,20 @@ public class AltActivity extends AppCompatActivity {
             // The code in this method will be executed when the next button is clicked on.
             @Override
             public void onClick(View view) {
-                EditText getAltRecord = (EditText) findViewById(R.id.alt);
-                String altRecord = getAltRecord.getText().toString();
-
+                //Vars
+                EditText altText = (EditText) findViewById(R.id.alt);
+                Bundle thought = new Bundle();
+                String altThought = altText.getText().toString();
                 Intent nextIntent = new Intent(AltActivity.this, NowActivity.class);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.sitRecord", sitRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.moodsRecord", moodsRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.autoRecord", autoRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.proRecord", proRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.conRecord", conRecord);
-                nextIntent = nextIntent.putExtra("com.example.android.logthoughts.altRecord", altRecord);
+
+                //Action
+                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
+                thought.putString("com.example.android.logthoughts.moodsRecord", moodsThought);
+                thought.putString("com.example.android.logthoughts.autoRecord", autoThought);
+                thought.putString("com.example.android.logthoughts.proRecord", proThought);
+                thought.putString("com.example.android.logthoughts.conRecord", conThought);
+                thought.putString("com.example.android.logthoughts.altRecord", altThought);
+                nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }
         });
