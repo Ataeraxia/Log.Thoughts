@@ -8,6 +8,12 @@
     android:orientation="vertical"
     tools:context="com.example.android.logthoughts.SitActivity">
 
+    <TextView
+        android:id="@+id/sitHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="home"/>
+
     <!-- SIT DISPLAY 1 -->
     <TextView
         android:id="@+id/sit_display1"

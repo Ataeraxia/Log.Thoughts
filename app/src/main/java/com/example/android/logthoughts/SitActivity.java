@@ -18,6 +18,7 @@ public class SitActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sit);
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button nextSitButton = (Button) findViewById(R.id.next_sit);
 
@@ -39,6 +40,16 @@ public class SitActivity extends AppCompatActivity {
             }
         });
 
+        TextView homeSitButton = (TextView) findViewById(R.id.sitHome);
+
+        homeSitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(SitActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+            }
+        });
+
         final TextView sitHelpText = (TextView) findViewById(R.id.help_text);
 
         sitHelpText.setOnClickListener(new View.OnClickListener() {
@@ -50,4 +61,15 @@ public class SitActivity extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            // Respond to the action bar's Up/Home button
+//            case android.R.id.home:
+//                NavUtils.navigateUpFromSameTask(this);
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

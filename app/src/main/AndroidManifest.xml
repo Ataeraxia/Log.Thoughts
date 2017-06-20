@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SitActivity">
+        <activity android:name=".SitActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +28,8 @@
         <activity android:name=".AltActivity" />
         <activity android:name=".NowActivity" />
         <activity android:name=".SitHelpActivity" />
-        <activity android:name=".MoodsHelp"></activity>
+        <activity android:name=".MoodsHelp" />
+        <activity android:name=".HomeActivity"/>
     </application>
 
 </manifest>
