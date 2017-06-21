@@ -3,9 +3,12 @@ package com.example.android.logthoughts;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,6 +33,8 @@ import java.util.Date;
  *  These methods display the answers given by the user on the summary screen.
  */
 public class SummaryActivity extends AppCompatActivity {
+
+    static String LOG_TAG = "SUPERCAT";
 
     String thoughtsNull;
     String sitThought;
@@ -147,5 +152,34 @@ public class SummaryActivity extends AppCompatActivity {
 
         Intent nextIntent = new Intent(SummaryActivity.this, SitActivity.class);
         startActivity(nextIntent);
+    }
+
+    /* Checks if external storage is available for read and write */
+    public boolean isExternalStorageWritable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    /* Checks if external storage is available to at least read */
+    public boolean isExternalStorageReadable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    public File getAlbumStorageDir(Context context, String thoughtName) {
+        // Get the directory for the app's private documents directory.
+        File file = new File(context.getExternalFilesDir(
+                Environment.DIRECTORY_DOCUMENTS), thoughtName);
+        if (!file.mkdirs()) {
+            Log.e(LOG_TAG, "Directory not created");
+        }
+        return file;
     }
 }
