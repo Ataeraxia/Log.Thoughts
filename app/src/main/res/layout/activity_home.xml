@@ -21,6 +21,7 @@
     </LinearLayout>
 
     <ListView
+        android:id="@+id/drawer_list"
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_strings">
+        <item>Home</item>
+        <item>Recent Thoughts</item>
+        <item>Check&#8211;Ins</item>
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+        <item>Calendar</item>
+    </string-array>
+</resources>

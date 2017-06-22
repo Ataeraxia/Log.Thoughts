@@ -103,6 +103,7 @@ public class SummaryActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     private void displaySitRecordSummary() {
