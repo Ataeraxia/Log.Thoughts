@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class ProActivity extends AppCompatActivity {
 
@@ -17,25 +18,33 @@ public class ProActivity extends AppCompatActivity {
         final String sitThought;
         final String moodsThought;
         final String autoThought;
+        final String autoHotThought;
+        String emptyBundle = getString(R.string.empty_bundle);
 
         if (savedInstanceState == null) {
             Bundle thought = getIntent().getExtras();
             if (thought == null) {
-                sitThought = "Nothing to see here";
-                moodsThought = "Nothing to see here";
-                autoThought = "Nothing to see here";
+                sitThought = emptyBundle;
+                moodsThought = emptyBundle;
+                autoThought = emptyBundle;
+                autoHotThought = emptyBundle;
             } else {
-                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
-                moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
-                autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitThought");
+                moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
+                autoThought = thought.getString("com.example.android.logthoughts.autoThought");
+                autoHotThought = thought.getString("com.example.android.logthoughts.autoHotThought");
             }
         } else {
             // TODO: Figure out how savedInstanceState works and clean up this code
             Bundle thought = getIntent().getExtras();
-            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
-            moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
-            autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
+            sitThought = thought.getString("com.example.android.logthoughts.sitThought");
+            moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
+            autoThought = thought.getString("com.example.android.logthoughts.autoThought");
+            autoHotThought = thought.getString("com.example.android.logthoughts.autoHotThought");
         }
+
+        TextView proPrevWin = (TextView) findViewById(R.id.pro_prev_win);
+        proPrevWin.setText(autoHotThought);
 
         Button nextProButton = (Button) findViewById(R.id.next_pro);
 
@@ -51,10 +60,11 @@ public class ProActivity extends AppCompatActivity {
                 Intent nextIntent = new Intent(ProActivity.this, ConActivity.class);
 
                 //Action
-                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
-                thought.putString("com.example.android.logthoughts.moodsRecord", moodsThought);
-                thought.putString("com.example.android.logthoughts.autoRecord", autoThought);
-                thought.putString("com.example.android.logthoughts.proRecord", proThought);
+                thought.putString("com.example.android.logthoughts.sitThought", sitThought);
+                thought.putString("com.example.android.logthoughts.moodsThought", moodsThought);
+                thought.putString("com.example.android.logthoughts.autoThought", autoThought);
+                thought.putString("com.example.android.logthoughts.autoHotThought", autoHotThought);
+                thought.putString("com.example.android.logthoughts.proThought", proThought);
                 nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }

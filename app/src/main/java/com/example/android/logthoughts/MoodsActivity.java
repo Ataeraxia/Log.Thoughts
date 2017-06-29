@@ -20,14 +20,14 @@ public class MoodsActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle thought = getIntent().getExtras();
             if(thought == null) {
-                sitThought = "Nothing to see here";
+                sitThought = getString(R.string.empty_bundle);
             } else {
-                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitThought");
             }
         } else {
             // TODO: Figure out how savedInstanceState works and clean up this code
             Bundle thought = getIntent().getExtras();
-            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
+            sitThought = thought.getString("com.example.android.logthoughts.sitThought");
         }
 
         Button nextMoodsButton = (Button) findViewById(R.id.next_moods);
@@ -38,14 +38,14 @@ public class MoodsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Vars
-                EditText getMoodsRecord = (EditText) findViewById(R.id.moods_edit);
+                EditText moodsText = (EditText) findViewById(R.id.moods_edit);
                 Bundle thought = new Bundle();
-                String moodsThought = getMoodsRecord.getText().toString();
+                String moodsThought = moodsText.getText().toString();
                 Intent nextIntent = new Intent(MoodsActivity.this, AutoActivity.class);
 
                 //Action
-                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
-                thought.putString("com.example.android.logthoughts.moodsRecord", moodsThought);
+                thought.putString("com.example.android.logthoughts.sitThought", sitThought);
+                thought.putString("com.example.android.logthoughts.moodsThought", moodsThought);
                 nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }

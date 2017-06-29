@@ -10,6 +10,7 @@
     <string name="help_tap">More help</string>
     <string name="next">next</string>
     <string name="prev_win_sorry">Sorry, we\'re having trouble displaying this right now.</string>
+    <string name="empty_bundle">Problem finding this info.</string>
 
     <!-- Sit Activity -->
     <string name="sit_display1">Situation</string>
@@ -30,6 +31,7 @@
     <!-- Pro Activity -->
     <string name="pro_display1">Evidence For the Hot Thought</string>
     <string name="pro_sub">Factual information that proves that the Hot Thought might be true.</string>
+    <string name="pro_prev_head">Your Hot Thought</string>
     <string name="pro_hint" formatted="false">I\'ve seen this happen before</string>
 
     <!-- Con Activity -->

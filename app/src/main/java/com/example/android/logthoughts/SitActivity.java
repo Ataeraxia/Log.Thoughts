@@ -34,7 +34,7 @@ public class SitActivity extends AppCompatActivity {
                 Intent nextIntent = new Intent(SitActivity.this, MoodsActivity.class);
 
                 //Action
-                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
+                thought.putString("com.example.android.logthoughts.sitThought", sitThought);
                 nextIntent = nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }

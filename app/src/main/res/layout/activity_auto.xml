@@ -33,29 +33,23 @@
     <EditText
         android:id="@+id/auto"
         style="@style/edittext"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/lightgreen_800"
         android:layout_below="@id/help_text"
         android:hint="@string/auto_hint" />
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/auto_hotlayout"
-        android:layout_width="match_parent"
-        android:layout_below="@id/auto"
-        android:layout_height="wrap_content">
-
-    <!-- EDITTEXT -->
+    <!-- HOT EDITTEXT -->
     <EditText
         android:id="@+id/auto_hot"
         style="@style/edittext"
         android:backgroundTint="@color/lightgreen_800"
+        android:layout_below="@id/auto"
         android:hint="@string/hot_thought" />
-
-    </android.support.design.widget.TextInputLayout>
 
     <!-- NEXT -->
     <Button
         android:id="@+id/next_auto"
         style="@style/next_button"
-        android:layout_below="@id/auto_hotlayout" />
+        android:layout_below="@id/auto_hot" />
 
 </RelativeLayout>
