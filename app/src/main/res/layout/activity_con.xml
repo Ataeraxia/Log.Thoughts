@@ -33,12 +33,26 @@
         android:layout_below="@id/con_sub"
         android:text="@string/help_tap"/>
 
+    <!-- PREV HEADING -->
+    <TextView
+        android:id="@+id/con_prev_head"
+        style="@style/prev_head"
+        android:layout_below="@id/help_text"
+        android:text="@string/pro_prev_head"/>
+
+    <!-- PREV WINDOW -->
+    <TextView
+        android:id="@+id/con_prev_win"
+        style="@style/prev_win"
+        android:layout_below="@id/con_prev_head"
+        android:text="@string/prev_win_sorry"/>
+
     <!-- EDITTEXT -->
     <EditText
         android:id="@+id/con"
         style="@style/edittext"
         android:backgroundTint="@color/teal_800"
-        android:layout_below="@id/help_text"
+        android:layout_below="@id/con_prev_win"
         android:hint="@string/con_hint" />
 
     <!-- NEXT -->

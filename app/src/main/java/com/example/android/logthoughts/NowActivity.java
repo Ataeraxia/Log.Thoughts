@@ -51,7 +51,7 @@ public class NowActivity extends AppCompatActivity {
         }
 
         TextView nowPrevWin = (TextView) findViewById(R.id.now_prev_win);
-        nowPrevWin.setText(moodsThought);
+        if (moodsThought != null) {nowPrevWin.setText(moodsThought);}
 
         Button nextNowButton = (Button) findViewById(R.id.next_now);
 

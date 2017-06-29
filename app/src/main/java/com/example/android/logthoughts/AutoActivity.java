@@ -43,17 +43,17 @@ public class AutoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Vars
                 EditText autoText = (EditText) findViewById(R.id.auto);
-                EditText autoHotText = (EditText) findViewById(R.id.auto_hot);
+                EditText hotText = (EditText) findViewById(R.id.auto_hot);
                 Bundle thought = new Bundle();
                 String autoThought = autoText.getText().toString();
-                String autoHotThought = autoHotText.getText().toString();
+                String hotThought = hotText.getText().toString();
                 Intent nextIntent = new Intent(AutoActivity.this, ProActivity.class);
 
                 //Action
                 thought.putString("com.example.android.logthoughts.sitThought", sitThought);
                 thought.putString("com.example.android.logthoughts.moodsThought", moodsThought);
                 thought.putString("com.example.android.logthoughts.autoThought", autoThought);
-                thought.putString("com.example.android.logthoughts.autoHotThought", autoHotThought);
+                thought.putString("com.example.android.logthoughts.hotThought", hotThought);
                 nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }

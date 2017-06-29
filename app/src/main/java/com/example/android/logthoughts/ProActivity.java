@@ -18,7 +18,7 @@ public class ProActivity extends AppCompatActivity {
         final String sitThought;
         final String moodsThought;
         final String autoThought;
-        final String autoHotThought;
+        final String hotThought;
         String emptyBundle = getString(R.string.empty_bundle);
 
         if (savedInstanceState == null) {
@@ -27,12 +27,12 @@ public class ProActivity extends AppCompatActivity {
                 sitThought = emptyBundle;
                 moodsThought = emptyBundle;
                 autoThought = emptyBundle;
-                autoHotThought = emptyBundle;
+                hotThought = emptyBundle;
             } else {
                 sitThought = thought.getString("com.example.android.logthoughts.sitThought");
                 moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
                 autoThought = thought.getString("com.example.android.logthoughts.autoThought");
-                autoHotThought = thought.getString("com.example.android.logthoughts.autoHotThought");
+                hotThought = thought.getString("com.example.android.logthoughts.hotThought");
             }
         } else {
             // TODO: Figure out how savedInstanceState works and clean up this code
@@ -40,11 +40,11 @@ public class ProActivity extends AppCompatActivity {
             sitThought = thought.getString("com.example.android.logthoughts.sitThought");
             moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
             autoThought = thought.getString("com.example.android.logthoughts.autoThought");
-            autoHotThought = thought.getString("com.example.android.logthoughts.autoHotThought");
+            hotThought = thought.getString("com.example.android.logthoughts.autoHotThought");
         }
 
         TextView proPrevWin = (TextView) findViewById(R.id.pro_prev_win);
-        proPrevWin.setText(autoHotThought);
+        proPrevWin.setText(hotThought);
 
         Button nextProButton = (Button) findViewById(R.id.next_pro);
 
@@ -63,7 +63,7 @@ public class ProActivity extends AppCompatActivity {
                 thought.putString("com.example.android.logthoughts.sitThought", sitThought);
                 thought.putString("com.example.android.logthoughts.moodsThought", moodsThought);
                 thought.putString("com.example.android.logthoughts.autoThought", autoThought);
-                thought.putString("com.example.android.logthoughts.autoHotThought", autoHotThought);
+                thought.putString("com.example.android.logthoughts.hotThought", hotThought);
                 thought.putString("com.example.android.logthoughts.proThought", proThought);
                 nextIntent.putExtras(thought);
                 startActivity(nextIntent);
