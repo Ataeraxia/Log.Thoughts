@@ -9,6 +9,7 @@
     <!-- Main Activities -->
     <string name="help_tap">More help</string>
     <string name="next">next</string>
+    <string name="prev_win_sorry">Sorry, we\'re having trouble displaying this right now.</string>
 
     <!-- Sit Activity -->
     <string name="sit_display1">Situation</string>
@@ -44,6 +45,7 @@
     <!-- Now Activity -->
     <string name="now_display1">Moods Now</string>
     <string name="now_sub">List your moods after doing this activity and rate them on a scale of 0&#8211;100.</string>
+    <string name="now_prev_head">Your moods before</string>
     <string name="now_hint" formatted="false">Anxious 40%\nAngry 0%\nTense muscles 10%</string>
     <!-- End Main Activities -->
 

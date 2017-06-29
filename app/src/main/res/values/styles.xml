@@ -63,6 +63,32 @@
         <item name="android:layout_marginRight">64dp</item>
     </style>
 
+    <!-- Previous answer header style -->
+
+    <style name="prev_head">
+        <item name="android:textColor">@color/hint</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+    <!-- Previous answer window style -->
+    <style name="prev_win">
+        <item name="android:textColor">@color/hint</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
     <!-- EditText style -->
     <style name="edittext">
         <item name="android:textSize">20sp</item>

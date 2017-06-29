@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class NowActivity extends AppCompatActivity {
 
@@ -48,6 +49,9 @@ public class NowActivity extends AppCompatActivity {
             conThought = thought.getString("com.example.android.logthoughts.conRecord");
             altThought = thought.getString("com.example.android.logthoughts.altRecord");
         }
+
+        TextView nowPrevWin = (TextView) findViewById(R.id.now_prev_win);
+        nowPrevWin.setText(moodsThought);
 
         Button nextNowButton = (Button) findViewById(R.id.next_now);
 
