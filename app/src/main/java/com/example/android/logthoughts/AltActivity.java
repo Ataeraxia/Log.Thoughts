@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class AltActivity extends AppCompatActivity {
 
@@ -17,33 +18,43 @@ public class AltActivity extends AppCompatActivity {
         final String sitThought;
         final String moodsThought;
         final String autoThought;
+        final String hotThought;
         final String proThought;
         final String conThought;
+        String emptyBundle = getString(R.string.empty_bundle);
 
         if (savedInstanceState == null) {
             Bundle thought = getIntent().getExtras();
             if(thought == null) {
-                sitThought = "Nothing to see here";
-                moodsThought = "Nothing to see here";
-                autoThought = "Nothing to see here";
-                proThought = "Nothing to see here";
-                conThought = "Nothing to see here";
+                sitThought = emptyBundle;
+                moodsThought = emptyBundle;
+                autoThought = emptyBundle;
+                hotThought = emptyBundle;
+                proThought = emptyBundle;
+                conThought = emptyBundle;
             } else {
-                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
-                moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
-                autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
-                proThought = thought.getString("com.example.android.logthoughts.proRecord");
-                conThought = thought.getString("com.example.android.logthoughts.conRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitThought");
+                moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
+                autoThought = thought.getString("com.example.android.logthoughts.autoThought");
+                hotThought = thought.getString("com.example.android.logthoughts.hotThought");
+                proThought = thought.getString("com.example.android.logthoughts.proThought");
+                conThought = thought.getString("com.example.android.logthoughts.conThought");
             }
         } else {
             // TODO: Figure out how savedInstanceState works and clean up this code
             Bundle thought = getIntent().getExtras();
-            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
-            moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
-            autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
-            proThought = thought.getString("com.example.android.logthoughts.proRecord");
-            conThought = thought.getString("com.example.android.logthoughts.conRecord");
+            sitThought = thought.getString("com.example.android.logthoughts.sitThought");
+            moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
+            autoThought = thought.getString("com.example.android.logthoughts.autoThought");
+            hotThought = thought.getString("com.example.android.logthoughts.hotThought");
+            proThought = thought.getString("com.example.android.logthoughts.proThought");
+            conThought = thought.getString("com.example.android.logthoughts.conThought");
         }
+
+        TextView altProWin = (TextView) findViewById(R.id.alt_prev_pro_win);
+        altProWin.setText(proThought);
+        TextView altConWin = (TextView) findViewById(R.id.alt_prev_con_win);
+        altConWin.setText(conThought);
 
         Button nextAltButton = (Button) findViewById(R.id.next_alt);
 
@@ -59,12 +70,13 @@ public class AltActivity extends AppCompatActivity {
                 Intent nextIntent = new Intent(AltActivity.this, NowActivity.class);
 
                 //Action
-                thought.putString("com.example.android.logthoughts.sitRecord", sitThought);
-                thought.putString("com.example.android.logthoughts.moodsRecord", moodsThought);
-                thought.putString("com.example.android.logthoughts.autoRecord", autoThought);
-                thought.putString("com.example.android.logthoughts.proRecord", proThought);
-                thought.putString("com.example.android.logthoughts.conRecord", conThought);
-                thought.putString("com.example.android.logthoughts.altRecord", altThought);
+                thought.putString("com.example.android.logthoughts.sitThought", sitThought);
+                thought.putString("com.example.android.logthoughts.moodsThought", moodsThought);
+                thought.putString("com.example.android.logthoughts.autoThought", autoThought);
+                thought.putString("com.example.android.logthoughts.hotThought", hotThought);
+                thought.putString("com.example.android.logthoughts.proThought", proThought);
+                thought.putString("com.example.android.logthoughts.conThought", conThought);
+                thought.putString("com.example.android.logthoughts.altThought", altThought);
                 nextIntent.putExtras(thought);
                 startActivity(nextIntent);
             }

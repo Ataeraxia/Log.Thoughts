@@ -29,12 +29,40 @@
         android:layout_below="@id/alt_sub"
         android:text="@string/help_tap"/>
 
+    <!-- PRO PREV HEADING -->
+    <TextView
+        android:id="@+id/alt_prev_pro_head"
+        style="@style/prev_head"
+        android:layout_below="@id/help_text"
+        android:text="@string/alt_prev_pro_head"/>
+
+    <!-- PRO PREV WINDOW -->
+    <TextView
+        android:id="@+id/alt_prev_pro_win"
+        style="@style/prev_win"
+        android:layout_below="@id/alt_prev_pro_head"
+        android:text="@string/prev_win_sorry"/>
+
+    <!-- CON PREV HEADING -->
+    <TextView
+        android:id="@+id/alt_prev_con_head"
+        style="@style/prev_head"
+        android:layout_below="@id/alt_prev_pro_win"
+        android:text="@string/alt_prev_con_head"/>
+
+    <!-- CON PREV WINDOW -->
+    <TextView
+        android:id="@+id/alt_prev_con_win"
+        style="@style/prev_win"
+        android:layout_below="@id/alt_prev_con_head"
+        android:text="@string/prev_win_sorry"/>
+
     <!-- EDITTEXT -->
     <EditText
         android:id="@+id/alt"
         style="@style/edittext"
         android:backgroundTint="@color/orange_800"
-        android:layout_below="@id/help_text"
+        android:layout_below="@id/alt_prev_con_win"
         android:hint="@string/alt_hint" />
 
     <!-- NEXT -->

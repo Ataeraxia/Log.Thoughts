@@ -42,6 +42,8 @@
     <!-- Alt Activity -->
     <string name="alt_display1">Balanced Thoughts</string>
     <string name="alt_sub">Use your evidence for and evidence against your Hot Thought to write down some balanced or alternative thoughts.</string>
+    <string name="alt_prev_pro_head">Pro Thoughts</string>
+    <string name="alt_prev_con_head">Con Thoughts</string>
     <string name="alt_hint" formatted="false">Things haven\'t gone well lately, but I know tomorrow will be better</string>
 
     <!-- Now Activity -->
