@@ -1,17 +1,9 @@
 package com.example.android.logthoughts;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  *  SummaryActivity shows the user the answers they gave in the first 7 activities.
@@ -36,14 +28,15 @@ public class SummaryActivity extends AppCompatActivity {
 
     static String LOG_TAG = "SUPERCAT";
 
-    String thoughtsNull;
     String sitThought;
     String moodsThought;
     String autoThought;
+    String hotThought;
     String proThought;
     String conThought;
     String altThought;
     String nowThought;
+    String emptyBundle = getString(R.string.empty_bundle);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,26 +47,35 @@ public class SummaryActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle thought = getIntent().getExtras();
             if(thought == null) {
-                thoughtsNull = "Nothing to see here";
+                sitThought = emptyBundle;
+                moodsThought = emptyBundle;
+                autoThought = emptyBundle;
+                hotThought = emptyBundle;
+                proThought = emptyBundle;
+                conThought = emptyBundle;
+                altThought = emptyBundle;
+                nowThought = emptyBundle;
             } else {
-                sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
-                moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
-                autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
-                proThought = thought.getString("com.example.android.logthoughts.proRecord");
-                conThought = thought.getString("com.example.android.logthoughts.conRecord");
-                altThought = thought.getString("com.example.android.logthoughts.altRecord");
-                nowThought = thought.getString("com.example.android.logthoughts.nowRecord");
+                sitThought = thought.getString("com.example.android.logthoughts.sitThought");
+                moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
+                autoThought = thought.getString("com.example.android.logthoughts.autoThought");
+                hotThought = thought.getString("com.example.android.logthoughts.hotThought");
+                proThought = thought.getString("com.example.android.logthoughts.proThought");
+                conThought = thought.getString("com.example.android.logthoughts.conThought");
+                altThought = thought.getString("com.example.android.logthoughts.altThought");
+                nowThought = thought.getString("com.example.android.logthoughts.nowThought");
             }
         } else {
             // TODO: Figure out how savedInstanceState works and clean up this code
             Bundle thought = getIntent().getExtras();
-            sitThought = thought.getString("com.example.android.logthoughts.sitRecord");
-            moodsThought = thought.getString("com.example.android.logthoughts.moodsRecord");
-            autoThought = thought.getString("com.example.android.logthoughts.autoRecord");
-            proThought = thought.getString("com.example.android.logthoughts.proRecord");
-            conThought = thought.getString("com.example.android.logthoughts.conRecord");
-            altThought = thought.getString("com.example.android.logthoughts.altRecord");
-            nowThought = thought.getString("com.example.android.logthoughts.nowRecord");
+            sitThought = thought.getString("com.example.android.logthoughts.sitThought");
+            moodsThought = thought.getString("com.example.android.logthoughts.moodsThought");
+            autoThought = thought.getString("com.example.android.logthoughts.autoThought");
+            hotThought = thought.getString("com.example.android.logthoughts.hotThought");
+            proThought = thought.getString("com.example.android.logthoughts.proThought");
+            conThought = thought.getString("com.example.android.logthoughts.conThought");
+            altThought = thought.getString("com.example.android.logthoughts.altThought");
+            nowThought = thought.getString("com.example.android.logthoughts.nowThought");
         }
 
         displaySitRecordSummary();
@@ -84,25 +86,26 @@ public class SummaryActivity extends AppCompatActivity {
         displayAltRecordSummary();
         displayNowRecordSummary();
 
-        // Save the thought record at this step
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-        Date now = new Date();
-        String filename = "ThoughtRecord_"+formatter.format(now);
-        FileOutputStream outputStream;
-
-        try {
-            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-            outputStream.write(sitThought.getBytes());
-            outputStream.write(moodsThought.getBytes());
-            outputStream.write(autoThought.getBytes());
-            outputStream.write(proThought.getBytes());
-            outputStream.write(conThought.getBytes());
-            outputStream.write(altThought.getBytes());
-            outputStream.write(nowThought.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        // Save the thought record at this step
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+//        Date now = new Date();
+//        String filename = "ThoughtRecord_" + formatter.format(now);
+//        FileOutputStream outputStream;
+//
+//        try {
+//            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+//            outputStream.write(sitThought.getBytes());
+//            outputStream.write(moodsThought.getBytes());
+//            outputStream.write(autoThought.getBytes());
+//            outputStream.write(hotThought.getBytes());
+//            outputStream.write(proThought.getBytes());
+//            outputStream.write(conThought.getBytes());
+//            outputStream.write(altThought.getBytes());
+//            outputStream.write(nowThought.getBytes());
+//            outputStream.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
     }
 
@@ -142,7 +145,6 @@ public class SummaryActivity extends AppCompatActivity {
     }
 
     public void restartThoughtRecord() {
-        thoughtsNull = null;
         sitThought = null;
         moodsThought = null;
         autoThought = null;
@@ -155,32 +157,32 @@ public class SummaryActivity extends AppCompatActivity {
         startActivity(nextIntent);
     }
 
-    /* Checks if external storage is available for read and write */
-    public boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    /* Checks if external storage is available to at least read */
-    public boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-        if (Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
-            return true;
-        }
-        return false;
-    }
-
-    public File getAlbumStorageDir(Context context, String thoughtName) {
-        // Get the directory for the app's private documents directory.
-        File file = new File(context.getExternalFilesDir(
-                Environment.DIRECTORY_DOCUMENTS), thoughtName);
-        if (!file.mkdirs()) {
-            Log.e(LOG_TAG, "Directory not created");
-        }
-        return file;
-    }
+//    /* Checks if external storage is available for read and write */
+//    public boolean isExternalStorageWritable() {
+//        String state = Environment.getExternalStorageState();
+//        if (Environment.MEDIA_MOUNTED.equals(state)) {
+//            return true;
+//        }
+//        return false;
+//    }
+//
+//    /* Checks if external storage is available to at least read */
+//    public boolean isExternalStorageReadable() {
+//        String state = Environment.getExternalStorageState();
+//        if (Environment.MEDIA_MOUNTED.equals(state) ||
+//                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+//            return true;
+//        }
+//        return false;
+//    }
+//
+//    public File getAlbumStorageDir(Context context, String thoughtName) {
+//        // Get the directory for the app's private documents directory.
+//        File file = new File(context.getExternalFilesDir(
+//                Environment.DIRECTORY_DOCUMENTS), thoughtName);
+//        if (!file.mkdirs()) {
+//            Log.e(LOG_TAG, "Directory not created");
+//        }
+//        return file;
+//    }
 }

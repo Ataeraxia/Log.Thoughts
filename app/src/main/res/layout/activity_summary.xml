@@ -59,6 +59,17 @@
         android:id="@+id/auto_summary_text"
         tools:text="Lots of the text stuff" />
 
+    <!-- HOT TITLE -->
+    <TextView
+        style="@style/hot_title"
+        android:text="Hot Thought"/>
+
+    <!-- HOT BODY 1 -->
+    <TextView
+        style="@style/body_hot_text"
+        android:id="@+id/hot_summary_text"
+        tools:text="Lots of the text stuff" />
+
     <!-- PRO TITLE -->
     <TextView
         style="@style/summary_title"
