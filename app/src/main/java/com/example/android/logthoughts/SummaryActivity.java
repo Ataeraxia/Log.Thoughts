@@ -36,8 +36,7 @@ public class SummaryActivity extends AppCompatActivity {
     String conThought;
     String altThought;
     String nowThought;
-    String emptyBundle;
-    emptyBundle = getString(R.string.empty_bundle);
+    String emptyBundle = "Problem finding this info.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

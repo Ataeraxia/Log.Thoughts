@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightblue_200"
-    android:orientation="vertical"
     tools:context="com.example.android.logthoughts.SitActivity">
 
-    <TextView
-        android:id="@+id/sitHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="home"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <!-- SIT DISPLAY 1 -->
-    <TextView
-        android:id="@+id/sit_display1"
-        style="@style/display1"
-        android:text="@string/sit_display1" />
+        <TextView
+            android:id="@+id/sitHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="home" />
 
-    <!-- SIT SUBHEADING -->
-    <TextView
-        android:id="@+id/sit_sub"
-        style="@style/subheading"
-        android:layout_below="@id/sit_display1"
-        android:text="@string/sit_sub" />
+        <!-- SIT DISPLAY 1 -->
+        <TextView
+            android:id="@+id/sit_display1"
+            style="@style/display1"
+            android:text="@string/sit_display1" />
 
-    <!-- HELP TAPPABLE -->
-    <TextView
-        android:id="@+id/help_text"
-        style="@style/help_tap"
-        android:textColor="@color/lightblue_700"
-        android:layout_below="@id/sit_sub"
-        android:text="@string/help_tap"/>
+        <!-- SIT SUBHEADING -->
+        <TextView
+            android:id="@+id/sit_sub"
+            style="@style/subheading"
+            android:layout_below="@id/sit_display1"
+            android:text="@string/sit_sub" />
 
-    <!-- SIT EDITTEXT -->
-    <EditText
-        android:id="@+id/sit_edit"
-        style="@style/edittext"
-        android:layout_below="@id/help_text"
-        android:hint="@string/sit_hint" />
+        <!-- HELP TAPPABLE -->
+        <TextView
+            android:id="@+id/help_text"
+            style="@style/help_tap"
+            android:layout_below="@id/sit_sub"
+            android:text="@string/help_tap"
+            android:textColor="@color/lightblue_700" />
 
-    <!-- SIT BUTTON -->
-    <Button
-        android:id="@+id/next_sit"
-        style="@style/next_button"
-        android:layout_below="@id/sit_edit" />
+        <!-- SIT EDITTEXT -->
+        <EditText
+            android:id="@+id/sit_edit"
+            style="@style/edittext"
+            android:layout_below="@id/help_text"
+            android:hint="@string/sit_hint" />
 
-</RelativeLayout>
+        <!-- SIT BUTTON -->
+        <Button
+            android:id="@+id/next_sit"
+            style="@style/next_button"
+            android:layout_below="@id/sit_edit" />
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,74 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/orange_200"
-    android:orientation="vertical"
     tools:context="com.example.android.logthoughts.AltActivity">
 
-    <!-- DISPLAY 1 -->
-    <TextView
-        android:id="@+id/alt_display1"
-        style="@style/display1"
-        android:text="@string/alt_display1" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <!-- SUBHEADING -->
-    <TextView
-        android:id="@+id/alt_sub"
-        style="@style/subheading"
-        android:layout_below="@id/alt_display1"
-        android:text="@string/alt_sub"/>
+        <!-- DISPLAY 1 -->
+        <TextView
+            android:id="@+id/alt_display1"
+            style="@style/display1"
+            android:text="@string/alt_display1" />
 
-    <!-- HELP TAPPABLE -->
-    <TextView
-        android:id="@+id/help_text"
-        style="@style/help_tap"
-        android:textColor="@color/orange_800"
-        android:layout_below="@id/alt_sub"
-        android:text="@string/help_tap"/>
+        <!-- SUBHEADING -->
+        <TextView
+            android:id="@+id/alt_sub"
+            style="@style/subheading"
+            android:layout_below="@id/alt_display1"
+            android:text="@string/alt_sub" />
 
-    <!-- PRO PREV HEADING -->
-    <TextView
-        android:id="@+id/alt_prev_pro_head"
-        style="@style/prev_head"
-        android:layout_below="@id/help_text"
-        android:text="@string/alt_prev_pro_head"/>
+        <!-- HELP TAPPABLE -->
+        <TextView
+            android:id="@+id/help_text"
+            style="@style/help_tap"
+            android:layout_below="@id/alt_sub"
+            android:text="@string/help_tap"
+            android:textColor="@color/orange_800" />
 
-    <!-- PRO PREV WINDOW -->
-    <TextView
-        android:id="@+id/alt_prev_pro_win"
-        style="@style/prev_win"
-        android:layout_below="@id/alt_prev_pro_head"
-        android:text="@string/prev_win_sorry"/>
+        <!-- PRO PREV HEADING -->
+        <TextView
+            android:id="@+id/alt_prev_pro_head"
+            style="@style/prev_head"
+            android:layout_below="@id/help_text"
+            android:text="@string/alt_prev_pro_head" />
 
-    <!-- CON PREV HEADING -->
-    <TextView
-        android:id="@+id/alt_prev_con_head"
-        style="@style/prev_head"
-        android:layout_below="@id/alt_prev_pro_win"
-        android:text="@string/alt_prev_con_head"/>
+        <!-- PRO PREV WINDOW -->
+        <TextView
+            android:id="@+id/alt_prev_pro_win"
+            style="@style/prev_win"
+            android:layout_below="@id/alt_prev_pro_head"
+            android:text="@string/prev_win_sorry" />
 
-    <!-- CON PREV WINDOW -->
-    <TextView
-        android:id="@+id/alt_prev_con_win"
-        style="@style/prev_win"
-        android:layout_below="@id/alt_prev_con_head"
-        android:text="@string/prev_win_sorry"/>
+        <!-- CON PREV HEADING -->
+        <TextView
+            android:id="@+id/alt_prev_con_head"
+            style="@style/prev_head"
+            android:layout_below="@id/alt_prev_pro_win"
+            android:text="@string/alt_prev_con_head" />
 
-    <!-- EDITTEXT -->
-    <EditText
-        android:id="@+id/alt"
-        style="@style/edittext"
-        android:backgroundTint="@color/orange_800"
-        android:layout_below="@id/alt_prev_con_win"
-        android:hint="@string/alt_hint" />
+        <!-- CON PREV WINDOW -->
+        <TextView
+            android:id="@+id/alt_prev_con_win"
+            style="@style/prev_win"
+            android:layout_below="@id/alt_prev_con_head"
+            android:text="@string/prev_win_sorry" />
 
-    <!-- NEXT -->
-    <Button
-        android:id="@+id/next_alt"
-        style="@style/next_button"
-        android:layout_below="@id/alt" />
+        <!-- EDITTEXT -->
+        <EditText
+            android:id="@+id/alt"
+            style="@style/edittext"
+            android:layout_below="@id/alt_prev_con_win"
+            android:backgroundTint="@color/orange_800"
+            android:hint="@string/alt_hint" />
 
-</RelativeLayout>
+        <!-- NEXT -->
+        <Button
+            android:id="@+id/next_alt"
+            style="@style/next_button"
+            android:layout_below="@id/alt" />
+
+    </RelativeLayout>
+</ScrollView>

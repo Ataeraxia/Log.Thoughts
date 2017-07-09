@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow_100"
-    android:orientation="vertical"
     tools:context="com.example.android.logthoughts.MoodsActivity">
 
-    <!-- DISPLAY 1 -->
-    <TextView
-        android:id="@+id/moods_display1"
-        style="@style/display1"
-        android:text="@string/moods_display1" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <!-- SUBHEADING -->
-    <TextView
-        android:id="@+id/moods_sub"
-        style="@style/subheading"
-        android:layout_below="@id/moods_display1"
-        android:text="@string/moods_sub"/>
+        <!-- DISPLAY 1 -->
+        <TextView
+            android:id="@+id/moods_display1"
+            style="@style/display1"
+            android:text="@string/moods_display1" />
 
-    <!-- HELP TAPPABLE -->
-    <TextView
-        android:id="@+id/help_text"
-        style="@style/help_tap"
-        android:textColor="@color/yellow_900"
-        android:layout_below="@id/moods_sub"
-        android:text="@string/help_tap"/>
+        <!-- SUBHEADING -->
+        <TextView
+            android:id="@+id/moods_sub"
+            style="@style/subheading"
+            android:layout_below="@id/moods_display1"
+            android:text="@string/moods_sub" />
 
-    <!-- EDITTEXT -->
-    <EditText
-        android:id="@+id/moods_edit"
-        style="@style/edittext"
-        android:backgroundTint="@color/yellow_700"
-        android:layout_below="@id/help_text"
-        android:hint="@string/moods_hint" />
+        <!-- HELP TAPPABLE -->
+        <TextView
+            android:id="@+id/help_text"
+            style="@style/help_tap"
+            android:layout_below="@id/moods_sub"
+            android:text="@string/help_tap"
+            android:textColor="@color/yellow_900" />
 
-    <!-- NEXT -->
-    <Button
-        android:id="@+id/next_moods"
-        style="@style/next_button"
-        android:layout_below="@id/moods_edit" />
+        <!-- EDITTEXT -->
+        <EditText
+            android:id="@+id/moods_edit"
+            style="@style/edittext"
+            android:layout_below="@id/help_text"
+            android:backgroundTint="@color/yellow_700"
+            android:hint="@string/moods_hint" />
 
-</RelativeLayout>
+        <!-- NEXT -->
+        <Button
+            android:id="@+id/next_moods"
+            style="@style/next_button"
+            android:layout_below="@id/moods_edit" />
+
+    </RelativeLayout>
+</ScrollView>

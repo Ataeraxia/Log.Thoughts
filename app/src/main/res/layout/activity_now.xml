@@ -1,60 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pink_100"
-    android:orientation="vertical"
     tools:context="com.example.android.logthoughts.NowActivity">
 
-    <!-- DISPLAY 1 -->
-    <TextView
-        android:id="@+id/now_display1"
-        style="@style/display1"
-        android:text="@string/now_display1" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <!-- SUBHEADING -->
-    <TextView
-        android:id="@+id/now_sub"
-        style="@style/subheading"
-        android:layout_below="@id/now_display1"
-        android:text="@string/now_sub"/>
+        <!-- DISPLAY 1 -->
+        <TextView
+            android:id="@+id/now_display1"
+            style="@style/display1"
+            android:text="@string/now_display1" />
 
-    <!-- HELP TAPPABLE -->
-    <TextView
-        android:id="@+id/help_text"
-        style="@style/help_tap"
-        android:textColor="@color/pink_400"
-        android:layout_below="@id/now_sub"
-        android:text="@string/help_tap"/>
+        <!-- SUBHEADING -->
+        <TextView
+            android:id="@+id/now_sub"
+            style="@style/subheading"
+            android:layout_below="@id/now_display1"
+            android:text="@string/now_sub" />
 
-    <!-- PREV HEADING -->
-    <TextView
-        android:id="@+id/now_prev_head"
-        style="@style/prev_head"
-        android:layout_below="@id/help_text"
-        android:text="@string/now_prev_head"/>
+        <!-- HELP TAPPABLE -->
+        <TextView
+            android:id="@+id/help_text"
+            style="@style/help_tap"
+            android:layout_below="@id/now_sub"
+            android:text="@string/help_tap"
+            android:textColor="@color/pink_400" />
 
-    <!-- PREV WINDOW -->
-    <TextView
-        android:id="@+id/now_prev_win"
-        style="@style/prev_win"
-        android:layout_below="@id/now_prev_head"
-        android:text="@string/prev_win_sorry"/>
+        <!-- PREV HEADING -->
+        <TextView
+            android:id="@+id/now_prev_head"
+            style="@style/prev_head"
+            android:layout_below="@id/help_text"
+            android:text="@string/now_prev_head" />
 
-    <!-- EDITTEXT -->
-    <EditText
-        android:id="@+id/now"
-        style="@style/edittext"
-        android:backgroundTint="@color/pink_400"
-        android:layout_below="@id/now_prev_win"
-        android:hint="@string/now_hint" />
+        <!-- PREV WINDOW -->
+        <TextView
+            android:id="@+id/now_prev_win"
+            style="@style/prev_win"
+            android:layout_below="@id/now_prev_head"
+            android:text="@string/prev_win_sorry" />
 
-    <!-- NEXT -->
-    <Button
-        android:id="@+id/next_now"
-        style="@style/next_button"
-        android:layout_below="@id/now" />
+        <!-- EDITTEXT -->
+        <EditText
+            android:id="@+id/now"
+            style="@style/edittext"
+            android:layout_below="@id/now_prev_win"
+            android:backgroundTint="@color/pink_400"
+            android:hint="@string/now_hint" />
 
-</RelativeLayout>
+        <!-- NEXT -->
+        <Button
+            android:id="@+id/next_now"
+            style="@style/next_button"
+            android:layout_below="@id/now" />
+
+    </RelativeLayout>
+</ScrollView>
